@@ -10,14 +10,18 @@ body {
   font-family: var(--font-family);
   font-size: 16px;
   line-height: 1.5;
-  font-weight: 400; 
+  font-weight: 400;
   color: var(--main-color);
-  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   min-width: 100vw;
   min-height: 100vh;
   margin: 0;
+}
+
+section {
+  background-color: var(--background-color);
+  padding: 82px 0;
 }
 
 main {
@@ -43,4 +47,3 @@ main:has(.back-link) {
 html {
   scroll-behavior: smooth;
 }
-
