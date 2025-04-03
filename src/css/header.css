@@ -1,0 +1,22 @@
+/* header {
+  min-width: 80px;
+} */
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: row;
+}
+
+.order-project-btn {
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 60px;
+  width: 163px;
+  height: 55px;
+}
