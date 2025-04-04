@@ -159,8 +159,8 @@
   align-items: center;
 
   transition: all 0.3s ease;
-  min-width: 130px !important;
-  min-height: 130px !important;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   border: 2px solid #333;
   transition: all 0.3s ease;
