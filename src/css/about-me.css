@@ -1,0 +1,188 @@
+.about-me-section {
+}
+.about-me-text {
+  font-family: 'Inter Tight', sans-serif;
+
+  font-size: 24px;
+  line-height: 117%;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  padding-left: 32px;
+  padding-top: 32px;
+  padding-right: 32px;
+  padding-bottom: 272px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-me-text-wrapper {
+  background: #242527;
+  min-width: 320px;
+  max-width: 343px;
+  border-radius: 24px;
+
+  margin-bottom: 16px;
+}
+.about-me-text span:first-child {
+  color: #ed3b44;
+}
+.about-me-text span:last-child {
+  color: rgba(250, 250, 250, 0.4);
+}
+
+.about-me-image-wrapper {
+  min-width: 320px;
+  max-width: 343px;
+  border-radius: 24px;
+}
+
+.about-me-image-wrapper picture {
+  max-width: 343px;
+}
+
+/* АККОРДЕОН */
+.about-me-accordion-wrapper {
+  width: 100%;
+  max-width: 343px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.acc {
+  margin-bottom: 8px;
+
+  background-color: inherit;
+
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+
+  overflow: hidden;
+}
+
+.acc-btn {
+  width: 100%;
+  padding-left: 0;
+  padding-bottom: 24px;
+  padding-top: 10px;
+  font-size: 18px;
+  font-family: 'Inter Tight', sans-serif;
+  text-align: left;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s ease;
+  color: rgba(250, 250, 250, 0.4);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.acc.is-active .acc-btn::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.acc-content {
+  padding-top: 0;
+  padding-bottom: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding 0.3s;
+}
+
+.acc.is-active .acc-content {
+  max-height: 1000px;
+  opacity: 1;
+  /* padding-top: 25px; */
+  padding-bottom: 20px;
+}
+
+.acc-text {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+.acc-text:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+/* Додатково — стилі для списків, якщо використовуються */
+.acc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.acc-item {
+  margin-bottom: 8px;
+}
+
+.acc-arrow-circle {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.acc-arrow {
+  stroke: #fafafa;
+}
+/* #region  */
+.swiper {
+  max-width: 100%;
+
+  padding: 0 32px;
+  overflow: hidden;
+}
+.swiper-wrapper {
+  transition-timing-function: linear;
+  min-height: 130px;
+}
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.3s ease;
+  min-width: 130px !important;
+  min-height: 130px !important;
+  border-radius: 50%;
+  border: 2px solid #333;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+}
+
+.swiper-slide-active {
+  background-color: #ed3b44;
+  border: none;
+  transform: scale(1.05);
+}
+
+.swiper-arrow-next,
+.swiper-arrow-prev {
+  stroke: #3b3b3b;
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+
+/* #endregion */
