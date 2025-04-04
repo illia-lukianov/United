@@ -24,5 +24,12 @@
     <symbol id="icon-small-arrow-down" viewBox="0 0 32 32">
       <path stroke-width="3.2" d="m24 12-8 8-8-8"/>
     </symbol>
+    <symbol id="icon-mobile-menu-open" viewBox="0 0 32 32">
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M3.429 11.429h24M3.429 20.762h24"></path>
+    </symbol>
+    <symbol id="icon-mobile-menu-close" viewBox="0 0 32 32">
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M24 8l-16 16"></path>
+    <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M8 8l16 16"></path>
+    </symbol>
   </defs>
 </svg>

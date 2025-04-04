@@ -1,22 +1,105 @@
-/* header {
-  min-width: 80px;
-} */
+header {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+}
 
 .header-container {
+  padding-top: 32px;
+  padding-bottom: 32px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: gray;
 }
 
 .header-logo {
   display: flex;
   flex-direction: row;
+  gap: 8px;
+}
+
+.menu-link {
+  display: none;
+  text-decoration: underline;
+  letter-spacing: -0.02em;
 }
 
 .order-project-btn {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .menu-link {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .burger-svg {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .order-project-btn {
+    display: block;
+  }
+}
+
+/* Styles for Desktop devices
+@media only screen and (min-width: 1440px) {
+  .container {
+    width: 1440px;
+  }
+} */
+
+.order-project-btn,
+.order-project-btn-modal {
   background-color: var(--accent-color);
   border: none;
   border-radius: 60px;
   width: 163px;
   height: 55px;
+}
+.order-project-btn:hover,
+.order-project-btn-modal:hover {
+  background-color: var(--accent-hover-color);
+}
+
+.modal-menu {
+  display: none;
+  background-image: url('../img/hero/hero-mobile-background.webp');
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+}
+
+.modal-menu.is-open {
+  display: flex;
+}
+
+.modal-close-svg {
+  margin-left: auto;
+  margin-right: 16px;
+  margin-top: 32px;
+}
+
+.nav {
+  text-decoration: underline;
+}
+
+.order-project-btn-modal {
+  margin-bottom: 64px;
+  height: 45px;
 }

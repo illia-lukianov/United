@@ -1,28 +1,42 @@
-<header style="background-color: black">
+<header>
   <div class="container header-container">
     <div class="header-logo">
       <img src="../img/header/headers.webp" alt="Portfolio owner photo" />
-      <svg class="logo-icon" width="84" height="19" style="fill: black">
-        <use href="../img/sprite.svg#icon-close"></use>
+      <svg class="" width="84" height="19">
+        <use href="../img/logo.svg#logo"></use>
       </svg>
     </div>
-    <a href="">Menu</a>
-    <nav class="nav">
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link" href=""></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href=""></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href=""></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href=""></a>
-        </li>
-      </ul>
-    </nav>
-    <button class="order-project-btn" type="button">Order the project</button>
+    <a class="menu-link" href="">Menu</a>
+    <a href="#work-together">
+      <button class="order-project-btn" type="button">Order the project</button>
+    </a>
+    <svg class="burger-svg" width="28" height="28">
+      <use href="../img/logo.svg#burger"></use>
+    </svg>
+
+    <div class="modal-menu">
+      <svg class="modal-close-svg" width="28" height="28">
+        <use href="../img/logo.svg#modal-close"></use>
+      </svg>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="#about-me">About me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#benefits">Benefits</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#FAQ">FAQ</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="order-project-btn-modal" type="button">
+        Order the project
+      </button>
+    </div>
   </div>
 </header>
