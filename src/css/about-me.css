@@ -1,3 +1,11 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
 .about-me-section {
 }
 .about-me-text {
@@ -13,16 +21,17 @@
   padding-bottom: 272px;
 }
 
-.container {
+.about-me-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .about-me-text-wrapper {
   background: #242527;
-  min-width: 320px;
+
   max-width: 343px;
   border-radius: 24px;
 
@@ -34,25 +43,19 @@
 .about-me-text span:last-child {
   color: rgba(250, 250, 250, 0.4);
 }
-
 .about-me-image-wrapper {
-  min-width: 320px;
   max-width: 343px;
   border-radius: 24px;
 }
-
 .about-me-image-wrapper picture {
   max-width: 343px;
 }
-
-/* АККОРДЕОН */
 .about-me-accordion-wrapper {
   width: 100%;
   max-width: 343px;
   margin-top: 32px;
   margin-bottom: 32px;
 }
-
 .acc {
   margin-bottom: 8px;
 
@@ -67,8 +70,12 @@
   width: 100%;
   padding-left: 0;
   padding-bottom: 24px;
-  padding-top: 10px;
-  font-size: 18px;
+  padding-top: 0px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
   font-family: 'Inter Tight', sans-serif;
   text-align: left;
   border: none;
@@ -82,7 +89,6 @@
   justify-content: space-between;
   align-items: center;
 }
-
 .acc.is-active .acc-btn::after {
   transform: translateY(-50%) rotate(45deg);
 }
@@ -99,10 +105,9 @@
 .acc.is-active .acc-content {
   max-height: 1000px;
   opacity: 1;
-  /* padding-top: 25px; */
+
   padding-bottom: 20px;
 }
-
 .acc-text {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
@@ -110,20 +115,18 @@
   line-height: 150%;
   letter-spacing: -0.02em;
   color: #fafafa;
-}
 
-.acc-text:not(:last-child) {
+  margin-bottom: 32px;
+}
+.acc-text:last-child {
   margin-bottom: 16px;
 }
-
-/* Додатково — стилі для списків, якщо використовуються */
 .acc-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
-.acc-item {
+.acc-item.acc-item {
   margin-bottom: 8px;
 }
 
@@ -140,49 +143,206 @@
 
 .acc-arrow {
   stroke: #fafafa;
+  transition: transform 0.45s ease;
+  transform-origin: center;
 }
-/* #region  */
-.swiper {
-  max-width: 100%;
 
-  padding: 0 32px;
-  overflow: hidden;
+.acc.is-active .acc-arrow {
+  transform: rotate(180deg);
 }
-.swiper-wrapper {
-  transition-timing-function: linear;
-  min-height: 130px;
-}
-.swiper-slide {
+.container-swiper {
+  width: 100%;
+
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.swiper.skills-swiper {
+  box-sizing: border-box;
+  margin-left: 0;
+  overflow: hidden;
+  align-items: center;
+  max-width: 260px;
+  position: relative;
+}
+.swiper .swiper-slide {
+  margin-right: 0;
+}
+.swiper-slide-transform {
+  display: flex;
   justify-content: center;
   align-items: center;
 
-  transition: all 0.3s ease;
   width: 130px;
   height: 130px;
   border-radius: 50%;
   border: 2px solid #333;
-  transition: all 0.3s ease;
+
   cursor: pointer;
   color: #fff;
   text-align: center;
+  box-sizing: border-box;
   font-size: 16px;
 }
-
-.swiper-slide-active {
+.swiper-slide-active .swiper-slide-transform {
   background-color: #ed3b44;
   border: none;
-  transform: scale(1.05);
-}
-
-.swiper-arrow-next,
-.swiper-arrow-prev {
-  stroke: #3b3b3b;
-}
-.swiper-button-prev {
 }
 .swiper-button-next {
+  stroke: #3b3b3b;
+  fill: transparent;
 }
+@media only screen and (min-width: 768px) {
+  .about-me-text {
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 105%;
+
+    padding-left: 64px;
+    padding-top: 64px;
+    padding-right: 64px;
+    padding-bottom: 436px;
+  }
+  .about-me-text-wrapper {
+    background: #242527;
+    max-width: 704px;
+
+    border-radius: 24px;
+
+    margin-bottom: 16px;
+  }
+  .about-me-image-wrapper {
+    max-width: 704px;
+    border-radius: 24px;
+  }
+
+  .about-me-image-wrapper picture img {
+    width: 704px;
+  }
+  .about-me-accordion-wrapper {
+    width: 100%;
+    max-width: 704px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  .acc {
+    margin-bottom: 20px;
+  }
+
+  .acc-btn {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 32px;
+    font-size: 18px;
+  }
+  .acc-text {
+    margin-bottom: 16px;
+  }
+  .acc-text:last-child {
+    margin-bottom: 32px;
+  }
+  .acc.is-active .acc-content {
+    padding-bottom: 32px;
+  }
+  .container-swiper {
+    width: 100%;
+  }
+  .swiper.skills-swiper {
+    max-width: 600px;
+  }
+  .swiper-slide-transform {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .about-me-image-and-text-wrap {
+    display: flex;
+    gap: 16px;
+  }
+  .about-me-text {
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 105%;
+
+    padding-left: 64px;
+    padding-top: 64px;
+    padding-right: 64px;
+    padding-bottom: 436px;
+  }
+  .about-me-text-wrapper {
+    background: #242527;
+    max-width: 680px;
+
+    border-radius: 24px;
+
+    margin-bottom: 0;
+  }
+  .about-me-image-wrapper {
+    max-width: 680px;
+    border-radius: 24px;
+  }
+
+  .about-me-image-wrapper picture img {
+    width: 680px;
+  }
+  .about-me-accordion-wrapper {
+    width: 100%;
+    max-width: 1376px;
+    margin-top: 96px;
+    margin-bottom: 96px;
+  }
+  .acc {
+    margin-bottom: 20px;
+  }
+
+  .acc-btn {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 32px;
+    font-size: 18px;
+  }
+  .acc.is-active .acc-btn {
+    padding-bottom: 8px;
+  }
+
+  .acc-content {
+    max-width: 612px;
+    max-height: 10000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    margin-left: auto;
+    margin-right: 68px;
+  }
+
+  .acc-list .acc-text {
+    margin-bottom: 0;
+  }
+  .acc-list .acc-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .acc-list .acc-item:last-child {
+    margin-bottom: 32px;
+  }
+
+  .container-swiper {
+    width: 1312px;
+  }
+  .swiper.skills-swiper {
+    max-width: 1200px;
+    margin-right: 72px;
+  }
+  .swiper-slide-transform {
+    width: 200px;
+    height: 200px;
+  }
+}
+/* #region  */
 
 /* #endregion */

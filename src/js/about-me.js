@@ -2,29 +2,33 @@ import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 import Swiper from 'swiper';
 import 'swiper/css';
+import { Navigation, Keyboard } from 'swiper/modules';
 
 document.addEventListener('DOMContentLoaded', () => {
-  new Accordion('.about-me-accordion-wrapper', {
+  const accordion = new Accordion('.about-me-accordion-wrapper', {
     elementClass: 'acc',
     triggerClass: 'acc-btn',
     panelClass: 'acc-content',
     duration: 300,
     showMultiple: true,
   });
+
+  accordion.open(0);
 });
 
 const swiper = new Swiper('.swiper', {
+  modules: [Navigation, Keyboard],
+  direction: 'horizontal',
   slidesPerView: 2,
   loop: true,
   loopedSlides: 9,
   speed: 400,
   navigation: {
     nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
   },
   keyboard: {
     enabled: true,
-    onlyInViewport: false,
+    onlyInViewport: true,
   },
   breakpoints: {
     768: {
