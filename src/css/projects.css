@@ -1,4 +1,7 @@
 .projects-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 .projects-list-slides {
 }
@@ -90,6 +93,7 @@
     max-height: 55px;
   }
 }
+
 .projects-list {
   display: flex;
   align-items: center;
@@ -170,12 +174,17 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
+  position: relative;
+  margin-top: 32px;
+  width: 100%;
 }
 @media only screen and (min-width: 768px) {
   .projects-prev-next-buttons {
     gap: 20px;
+    margin-top: 64px;
   }
 }
+
 .prev,
 .next {
   border: 1px solid rgba(250, 250, 250, 0.5);
@@ -184,7 +193,7 @@
   width: 52px;
   height: 52px;
   background-color: var(--dark-color);
-  margin-top: 32px;
+  cursor: pointer;
 }
 @media only screen and (min-width: 768px) {
   .prev,
@@ -192,6 +201,21 @@
     padding: 18px;
     width: 68px;
     height: 68px;
-    margin-top: 64px;
   }
+}
+.next:disabled,
+.prev:disabled {
+  opacity: 0.5; /* Зменшуємо прозорість, коли кнопка неактивна */
+  pointer-events: none; /* Забороняємо клік на кнопці */
+}
+/* Не змінюємо display у swiper-slide, Swiper сам керує видимістю */
+.swiper-slide {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.swiper-slide.swiper-slide-active {
+  visibility: visible;
+  opacity: 1;
 }
