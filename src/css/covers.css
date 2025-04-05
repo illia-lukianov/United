@@ -7,15 +7,15 @@
   overflow: hidden;
   max-width: 100%;
   max-height: 508px;
-  background-color: rgba(217, 217, 217, 0.04);
+  background-color: var(--backing-color);
   background-image: radial-gradient(
       circle at 18% 12%,
-      rgba(255, 0, 0, 0.4) 0%,
+      var(--accent-dark-color) 0%,
       transparent 45%
     ),
     radial-gradient(
       circle at 103% 97%,
-      rgba(255, 0, 0, 0.4) 0%,
+      var(--accent-dark-color) 0%,
       transparent 45%
     );
   background-repeat: no-repeat;
@@ -27,12 +27,12 @@
     max-height: 960px;
     background-image: radial-gradient(
         circle at 30% 6%,
-        rgba(255, 0, 0, 0.4) 0%,
+        var(--accent-dark-color) 0%,
         transparent 25%
       ),
       radial-gradient(
         circle at 97% 74%,
-        rgba(255, 0, 0, 0.4) 0%,
+        var(--accent-dark-color) 0%,
         transparent 25%
       );
   }
@@ -41,17 +41,17 @@
   .covers-list {
     background-image: radial-gradient(
         circle at 10% 31%,
-        rgba(255, 0, 0, 0.4) 0%,
+        var(--accent-dark-color) 0%,
         transparent 20%
       ),
       radial-gradient(
         circle at 39% 10%,
-        rgba(255, 0, 0, 0.4) 0%,
+        var(--accent-dark-color) 0%,
         transparent 20%
       ),
       radial-gradient(
         circle at 91% 85%,
-        rgba(255, 0, 0, 0.4) 0%,
+        var(--accent-dark-color) 0%,
         transparent 20%
       );
   }
