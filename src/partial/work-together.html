@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/work-together.css" />
+  </head>
+  <body>
+    
+    <section class="work-together">
+      <div class="container">
+        <div class="header">
+          <img src="../img/work-together/image-tab-comp.webp" alt="User avatar" class="avatar" />
+          <h2>
+            <span>LET’S</span> <span class="accent">WORK</span><br />TOGETHER
+          </h2>
+        </div>
+
+        <form id="cooperationForm" novalidate>
+          <div class="form-group">
+            <input
+              type="email"
+              name="email"
+              placeholder="clients@gmail.com"
+              required
+              pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+            />
+            <input
+              type="text"
+              name="comments"
+              placeholder="comments"
+              required
+              maxlength="50"
+            />
+          </div>
+
+          <button type="submit" class="send-btn">Send</button>
+        </form>
+
+        <div class="contacts">
+          <a href="mailto:lloydjefferson@gmail.com">lloydjefferson@gmail.com</a>
+          <a href="tel:+380111111111">+380 11 1111 11 11</a>
+        </div>
+      </div>
+
+      <div id="modalBackdrop" class="modal-backdrop hidden">
+        <div class="modal">
+          <button class="close-btn" aria-label="Close">&times;</button>
+          <h3>Thank you for your interest in cooperation!</h3>
+          <p>
+            The manager will contact you shortly to discuss further details and
+            opportunities for cooperation. Please stay in touch.
+          </p>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="./work-together.html"></script>
+  </body>
+</html>
