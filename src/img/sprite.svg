@@ -3,6 +3,10 @@
     <symbol id="icon-arrow-left" viewBox="0 0 32 32">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M26.4 16H5.067M13.333 24l-8-8 8-8"/>
     </symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 32 32">
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M5.6 16h21.333"></path>
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M18.666 8l8 8-8 8"></path>
+    </symbol>
     <symbol id="icon-close" viewBox="0 0 32 32">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.667" d="M24 8 8 24M8 8l16 16"/>
     </symbol>

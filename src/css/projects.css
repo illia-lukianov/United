@@ -103,7 +103,6 @@
   flex-wrap: wrap;
   margin-bottom: 96px;
   gap: 6px;
-  line-height: 1;
 }
 @media only screen and (min-width: 768px) {
   .projects-list {
@@ -118,6 +117,7 @@
   }
 }
 .projects-item {
+  display: flex;
   border: 1px solid rgba(28, 29, 32, 0.2);
   border-radius: 60px;
   padding: 13px 18px;
@@ -132,6 +132,8 @@
 
   justify-content: center;
   align-items: center;
+
+  line-height: 1;
 }
 @media only screen and (min-width: 768px) {
   .projects-item {
@@ -201,7 +203,7 @@
 }
 .next:disabled,
 .prev:disabled {
-  opacity: 0.5; /* Зменшуємо прозорість, коли кнопка неактивна */
+  opacity: 0.2; /* Зменшуємо прозорість, коли кнопка неактивна */
   pointer-events: none; /* Забороняємо клік на кнопці */
 }
 /* Не змінюємо display у swiper-slide, Swiper сам керує видимістю */
@@ -214,4 +216,16 @@
 .swiper-slide.swiper-slide-active {
   visibility: visible;
   opacity: 1;
+}
+.icon-arrow-left,
+.icon-arrow-right {
+  fill: transparent;
+  stroke: #fafafa;
+}
+@media only screen and (min-width: 768px) {
+  .icon-arrow-left,
+  .icon-arrow-right {
+    width: 32px;
+    height: 32px;
+  }
 }
