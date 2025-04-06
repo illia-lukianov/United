@@ -1,3 +1,12 @@
+/* #region hero-small-devices */
+@media only screen and (max-width: 340px) {
+    .hero-list {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
+/* #endregion */
 /* #region hero-mobile */
 .hero-section {
   padding: 0;
@@ -9,8 +18,8 @@
   padding-top: 281px;
   padding-bottom: 32px;
   background-image: image-set(
-      url('/img/hero/hero-mobile-background.webp') 1x,
-      url('/img/hero/retina/hero-mobile-background@2x.webp') 2x,
+      url('/img/hero/mob/red-background-hero-mob@1x.webp') 1x,
+      url('/img/hero/retina-mob/red-background-hero-mob@2x.webp') 2x,
     );
   background-repeat: no-repeat;
   background-position: left;
@@ -62,8 +71,8 @@
   .hero {
     background-image:
       image-set(
-        url('../img/hero/hero-tablet-background.webp') 1x,
-        url('/img/hero/retina/hero-tablet-background@2x.webp') 2x,
+        url('/img/hero/tab/red-background-hero-tab@1x.webp') 1x,
+        url('/img/hero/retina-tab/red-background-hero-tab@2x.webp') 2x,
       )
   }
 
@@ -109,8 +118,8 @@
 @media only screen and (min-width: 1440px) {
   .hero {
     background-image: image-set(
-        url('/img/hero/hero-desk-background.webp') 1x,
-        url('/img/hero/retina/hero-desk-background@2x.webp') 2x,
+        url('/img/hero/comp/red-background-hero-comp@1x.webp') 1x,
+        url('/img/hero/retina-comp/red-background-hero-comp@2x.webp') 2x,
       )
     }
 
