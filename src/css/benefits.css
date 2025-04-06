@@ -1,0 +1,134 @@
+/* #region benefits section */
+.benefits-container {
+  margin: 0 auto;
+}
+
+.benefits-subtitle {
+  color: var(--second-title-color);
+  font-size: 16px;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1.5;
+}
+
+.benefits-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.benefits-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.benefits-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #242527;
+  border-radius: 20px;
+  padding: 24px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+
+}
+
+.benefits-icon {
+  width: 48px;
+  height: 48px;
+  background-color: var(--accent-color);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+
+.benefits-icon svg {
+  fill: var(--main-color);
+}
+
+.benefits-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+  color: var(--main-color);
+}
+
+.benefits-card-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: var(--main-translucent-color);
+}
+
+.benefits-button-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.benefits-button {
+  background-color: transparent;
+  border: 1px solid var(--dark-accent-color);
+  color: var(--main-color);
+  border-radius: 60px;
+  padding: 18px 36px;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.benefits-button:hover {
+  background-color: var(--accent-hover-color);
+}
+
+/* #region benefits Tablet */
+@media (min-width: 768px) {
+
+  .benefits-content {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .benefits-card {
+    width: calc(50% - 8px);
+  }
+
+  .benefits-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .benefits-button-wrapper {
+    margin-top: 0;
+  }
+}
+
+/* #region benefits desktop */
+@media (min-width: 1280px) {
+
+  .benefits-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .benefits-header {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .benefits-content {
+    flex: 1;
+    max-width: 50%;
+  }
+}
+
+/* #endregion */
