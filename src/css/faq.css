@@ -130,16 +130,6 @@
     .faq-item.is-active .faq-item-description {
         margin-top: 26px;
     }
-
-    .faq-item:nth-child(even) {
-        border-right: none;
-        padding-right: 0;
-    }
-
-    .faq-item:nth-child(odd) {
-        border-left: none;
-        padding-left: 0;
-    }
     
     .faq-item:nth-child(1) {
         order:1;
@@ -158,6 +148,14 @@
     }
     .faq-item:nth-child(6) {
         order:6;
+    }
+    .faq-item:nth-child(-n + 3) {
+    border-left: none;
+    padding-left: 0;
+    }
+    .faq-item:nth-child(n + 4) {
+        border-right: none;
+        padding-right: 0;
     }
 }
 /*#endregion */
