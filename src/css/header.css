@@ -1,25 +1,28 @@
+/* #region header base */
 header {
+  background-color: transparent;
   position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  width: 100%;
+  left: 0px;
+  right: 0px;
+  top: 20px;
 }
 
 .header-container {
-  padding-top: 32px;
-  padding-bottom: 32px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: gray;
 }
+/* #endregion */
 
+/* #region header logo */
 .header-logo {
   display: flex;
   flex-direction: row;
   gap: 8px;
 }
+/* #endregion */
 
+/* #region tablet and desktop menu */
 .menu-tablet-desktop {
   position: relative;
 }
@@ -39,7 +42,7 @@ header {
   visibility: hidden;
   max-height: 0;
   overflow: hidden;
-  transition: visibility 0s 0.8s, max-height 0.84s ease-in-out;
+  transition: visibility 0s 0.8s, max-height 0.8s ease-in-out;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -54,11 +57,29 @@ header {
   max-height: 500px;
   transition: visibility 0s, max-height 0.8s ease-in-out;
 }
+/* #endregion */
 
+/* #region buttons */
 .order-project-btn {
   display: none;
 }
 
+.order-project-btn,
+.order-project-btn-modal {
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 60px;
+  width: 163px;
+  height: 55px;
+}
+
+.order-project-btn:hover,
+.order-project-btn-modal:hover {
+  background-color: var(--accent-hover-color);
+}
+/* #endregion */
+
+/* #region media screen */
 @media only screen and (min-width: 768px) {
   .menu {
     display: block;
@@ -72,24 +93,13 @@ header {
     display: block;
   }
 }
+/* #endregion */
 
-.order-project-btn,
-.order-project-btn-modal {
-  background-color: var(--accent-color);
-  border: none;
-  border-radius: 60px;
-  width: 163px;
-  height: 55px;
-}
-.order-project-btn:hover,
-.order-project-btn-modal:hover {
-  background-color: var(--accent-hover-color);
-}
-
+/* #region modal menu */
 .modal-menu {
+  display: none;
   opacity: 0;
-  transform: translateX(100%);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
   background-image: url('../img/hero/hero-mobile-background.webp');
   background-size: cover;
   background-position: center;
@@ -100,17 +110,20 @@ header {
   align-items: center;
   text-align: center;
   position: fixed;
+  height: 100%;
   overflow: hidden;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   z-index: 1000;
+  pointer-events: none;
 }
 
 .modal-menu.is-open {
+  display: flex;
   opacity: 1;
-  transform: translateX(0);
+  pointer-events: auto;
 }
 
 .modal-close-svg {
@@ -127,3 +140,4 @@ header {
   margin-bottom: 64px;
   height: 45px;
 }
+/* #endregion */
