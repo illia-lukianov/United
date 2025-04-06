@@ -207,13 +207,13 @@
   pointer-events: none; /* Забороняємо клік на кнопці */
 }
 /* Не змінюємо display у swiper-slide, Swiper сам керує видимістю */
-.swiper-slide {
+.projects-item-slides {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.swiper-slide.swiper-slide-active {
+.projects-item-slides.swiper-slide-active {
   visibility: visible;
   opacity: 1;
 }
