@@ -189,6 +189,7 @@ body {
   border: none;
 }
 .swiper-button-next {
+  cursor: pointer;
   stroke: #3b3b3b;
   fill: transparent;
 }
@@ -330,10 +331,8 @@ body {
   .acc-list .acc-item:last-child {
     margin-bottom: 32px;
   }
-  .swiper-wrapper {
-  }
   .container-swiper {
-    max-width: 1312;
+    max-width: 1312px;
     width: 100%;
 
     overflow: hidden;
