@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   accordion.open(0);
 });
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.about-me-swiper', {
   modules: [Navigation, Keyboard],
   direction: 'horizontal',
   slidesPerView: 2,
@@ -43,6 +43,5 @@ const swiper = new Swiper('.swiper', {
 
 window.addEventListener('resize', () => {
   swiper.update();
-  swiper.slideTo(0);
 });
 console.log(`Скрипт працює!`);

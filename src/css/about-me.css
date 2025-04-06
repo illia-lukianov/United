@@ -6,6 +6,9 @@
 body {
   overflow-x: hidden;
 }
+
+/* #region SECTION */
+
 .about-me-section {
 }
 .about-me-text {
@@ -56,6 +59,9 @@ body {
   margin-top: 32px;
   margin-bottom: 32px;
 }
+/* #endregion */
+
+/* #region ACCORDEON */
 .acc {
   margin-bottom: 8px;
 
@@ -65,7 +71,6 @@ body {
 
   overflow: hidden;
 }
-
 .acc-btn {
   width: 100%;
   padding-left: 0;
@@ -150,6 +155,11 @@ body {
 .acc.is-active .acc-arrow {
   transform: rotate(180deg);
 }
+
+/* #endregion */
+
+/* #region SWIPER */
+
 .container-swiper {
   width: 100%;
 
@@ -157,7 +167,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.swiper.skills-swiper {
+.about-me-swiper.skills-swiper {
   box-sizing: border-box;
   margin-left: 0;
   overflow: hidden;
@@ -165,7 +175,7 @@ body {
   max-width: 260px;
   position: relative;
 }
-.swiper .swiper-slide {
+.about-me-swiper .about-me-swiper-slide {
   margin-right: 0;
 }
 .swiper-slide-transform {
@@ -193,6 +203,10 @@ body {
   stroke: #3b3b3b;
   fill: transparent;
 }
+/* #endregion */
+
+/* #region MEDIA 768px */
+
 @media only screen and (min-width: 768px) {
   .about-me-text {
     font-weight: 500;
@@ -250,7 +264,7 @@ body {
   .container-swiper {
     width: 100%;
   }
-  .swiper.skills-swiper {
+  .about-me-swiper.skills-swiper {
     max-width: 600px;
   }
   .swiper-slide-transform {
@@ -258,6 +272,9 @@ body {
     height: 200px;
   }
 }
+/* #endregion */
+
+/* #region MEDIA 1440px */
 
 @media only screen and (min-width: 1440px) {
   .about-me-image-and-text-wrap {
@@ -337,7 +354,7 @@ body {
 
     overflow: hidden;
   }
-  .swiper.skills-swiper {
+  .about-me-swiper.skills-swiper {
     max-width: 1200px;
     margin-right: 72px;
   }
@@ -348,6 +365,4 @@ body {
     flex-shrink: 0;
   }
 }
-/* #region  */
-
 /* #endregion */
