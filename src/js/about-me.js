@@ -1,5 +1,6 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
+
 import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation, Keyboard } from 'swiper/modules';
@@ -38,5 +39,10 @@ const swiper = new Swiper('.swiper', {
       slidesPerView: 6,
     },
   },
+});
+
+window.addEventListener('resize', () => {
+  swiper.update();
+  swiper.slideTo(0);
 });
 console.log(`Скрипт працює!`);
