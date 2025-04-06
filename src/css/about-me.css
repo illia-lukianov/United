@@ -9,11 +9,7 @@ body {
 
 /* #region SECTION */
 
-.about-me-section {
-}
 .about-me-text {
-  font-family: 'Inter Tight', sans-serif;
-
   font-size: 24px;
   line-height: 117%;
   letter-spacing: -0.03em;
