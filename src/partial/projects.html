@@ -1,9 +1,9 @@
 <section class="projects-section" id="projects">
   <div class="container">
     <div class="swiper-container">
-      <ul class="projects-list-slides">
+      <ul class="projects-list-slides swiper-wrapper">
         <li class="projects-item-slides swiper-slide swiper-slide-active">
-          <h1 class="projects-main-title">Projects</h1>
+          <h3 class="projects-main-title">Projects</h3>
           <div class="projects-wrapper-all">
             <div class="projects-wrapper-all-element">
               <ul class="projects-list">
@@ -26,12 +26,12 @@
                 <source
                   media="(min-width: 768px)"
                   srcset="
-                    ../img/projects/projects-1-comp-tab@1x.webp        1x,
-                    ../img/projects/retina/projects-1-comp-tab@2x.webp 2x
+                    img/projects/projects-1-comp-tab@1x.webp        1x,
+                    img/projects/retina/projects-1-comp-tab@2x.webp 2x
                   "
                 />
                 <img
-                  src="../img/projects/projects-1-tel.webp"
+                  src="img/projects/projects-1-tel.webp"
                   alt="Expand Your mind"
                   width="311"
                   height="195"
@@ -42,7 +42,7 @@
           </div>
         </li>
         <li class="projects-item-slides swiper-slide">
-          <h1 class="projects-main-title">Projects</h1>
+          <h3 class="projects-main-title">Projects</h3>
           <div class="projects-wrapper-all">
             <div class="projects-wrapper-all-element">
               <ul class="projects-list">
@@ -65,12 +65,12 @@
                 <source
                   media="(min-width: 768px)"
                   srcset="
-                    ../img/projects/projects-2-comp-tab@1x.webp        1x,
-                    ../img/projects/retina/projects-2-comp-tab@2x.webp 2x
+                    img/projects/projects-2-comp-tab@1x.webp        1x,
+                    img/projects/retina/projects-2-comp-tab@2x.webp 2x
                   "
                 />
                 <img
-                  src="../img/projects/projects-2-tel.webp"
+                  src="img/projects/projects-2-tel.webp"
                   alt="Pet Love"
                   width="311"
                   height="195"
@@ -81,7 +81,7 @@
           </div>
         </li>
         <li class="projects-item-slides swiper-slide">
-          <h1 class="projects-main-title">Projects</h1>
+          <h3 class="projects-main-title">Projects</h3>
           <div class="projects-wrapper-all">
             <div class="projects-wrapper-all-element">
               <ul class="projects-list">
@@ -104,12 +104,12 @@
                 <source
                   media="(min-width: 768px)"
                   srcset="
-                    ../img/projects/projects-3-comp-tab@1x.webp        1x,
-                    ../img/projects/retina/projects-3-comp-tab@2x.webp 2x
+                    img/projects/projects-3-comp-tab@1x.webp        1x,
+                    img/projects/retina/projects-3-comp-tab@2x.webp 2x
                   "
                 />
                 <img
-                  src="../img/projects/projects-3-tel.webp"
+                  src="img/projects/projects-3-tel.webp"
                   alt="Pet Love"
                   width="311"
                   height="195"
@@ -122,9 +122,12 @@
       </ul>
     </div>
     <div class="projects-prev-next-buttons">
-      <button class="prev">&#10094;</button>
+      <button class="prev">
+        <svg class="icon-arrow-left" width="32" height="32">
+          <use href="img/sprite.svg#icon-arrow-left"></use>
+        </svg>
+      </button>
       <button class="next">&#10095;</button>
     </div>
   </div>
 </section>
-<script type="module" src="../js/project.js"></script>

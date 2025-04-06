@@ -103,13 +103,10 @@
   flex-wrap: wrap;
   margin-bottom: 96px;
   gap: 6px;
-  max-width: 279px;
-  max-height: 96px;
+  line-height: 1;
 }
 @media only screen and (min-width: 768px) {
   .projects-list {
-    max-width: 312px;
-    max-height: 55px;
     margin-bottom: 164px;
     flex-wrap: nowrap;
   }
@@ -138,7 +135,6 @@
 }
 @media only screen and (min-width: 768px) {
   .projects-item {
-    max-height: 55px;
     padding: 18px;
   }
 }

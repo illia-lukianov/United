@@ -3,26 +3,18 @@ import Swiper from 'swiper';
 // import Swiper styles
 import 'swiper/css';
 
-// Ініціалізація Swiper
-const swiper = new Swiper('.swiper-container', {
-  loop: true, // Зациклювання слайдів
-  slidesPerView: 1, // Один слайд одночасно
-  spaceBetween: 0, // Відстань між слайдами
+import { Navigation, Keyboard } from 'swiper/modules';
 
-  // Налаштування для кнопок навігації
+const swiper = new Swiper('.swiper-container', {
+  modules: [Navigation, Keyboard],
+  loop: true,
+  loopedSlides: 3,
+  slidesPerView: 1,
+  spaceBetween: 0,
   navigation: {
     nextEl: '.next',
     prevEl: '.prev',
   },
-
-  // Налаштування спостереження за змінами
-  observer: true,
-  observeParents: true,
-
-  // Слухаємо подію зміни слайда
-  on: {
-    slideChange: function () {
-      console.log('Slide changed');
-    },
-  },
+  // observer: true,
+  // observeParents: true,
 });
