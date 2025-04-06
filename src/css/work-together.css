@@ -1,0 +1,21 @@
+.modal-backdrop.hidden {
+    display: none;
+  }
+
+  .modal {
+    background: #1C1D20;
+    padding: 64px;
+    border-radius: 20px;
+    max-width: 492px;
+    text-align: center;
+    position: relative;
+    padding: 64px;
+    
+  }
+
+  input {
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
