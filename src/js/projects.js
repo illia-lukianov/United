@@ -3,21 +3,21 @@ import 'swiper/css';
 
 import { Navigation, Keyboard } from 'swiper/modules';
 
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.projects-swiper-container', {
   modules: [Navigation, Keyboard],
   loop: true,
   loopedSlides: 3,
   slidesPerView: 1,
   spaceBetween: 0,
   navigation: {
-    nextEl: '.next',
-    prevEl: '.prev',
+    nextEl: '.projects-next-btn',
+    prevEl: '.projects-prev-btn',
   },
 });
 
 function updateNavigationButtons() {
-  const prevButton = document.querySelector('.prev');
-  const nextButton = document.querySelector('.next');
+  const prevButton = document.querySelector('.projects-prev-btn');
+  const nextButton = document.querySelector('.projects-next-btn');
 
   if (swiper.isBeginning) {
     prevButton.disabled = true;
