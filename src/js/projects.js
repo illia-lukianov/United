@@ -1,6 +1,4 @@
-// import Swiper JS
 import Swiper from 'swiper';
-// import Swiper styles
 import 'swiper/css';
 
 import { Navigation, Keyboard } from 'swiper/modules';
@@ -15,8 +13,6 @@ const swiper = new Swiper('.swiper-container', {
     nextEl: '.next',
     prevEl: '.prev',
   },
-  // observer: true,
-  // observeParents: true,
 });
 
 function updateNavigationButtons() {

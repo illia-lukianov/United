@@ -2,7 +2,7 @@ import "./js/header";
 import "./js/mobile-menu";
 import "./js/hero";
 import "./js/about-me";
-import "./js/project";
+import "./js/projects";
 import "./js/faq";
 import "./js/covers";
 import "./js/reviews";
