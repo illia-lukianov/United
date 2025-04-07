@@ -19,24 +19,28 @@ nav.addEventListener('click', () => {
 
 // modal menu mobile //
 const refs = {
-  modalBurger: document.querySelector('.burger-svg'),
+  modalBurger: document.querySelector('.burger-lnk'),
   modalMenu: document.querySelector('.modal-menu'),
-  modalClose: document.querySelector('.modal-close-svg'),
+  modalClose: document.querySelector('.modal-close-lnk'),
   closeElements: document.querySelectorAll(
     '.nav-item, .order-project-btn-modal'
   ),
 };
 
-refs.modalBurger.addEventListener('click', () => {
+refs.modalBurger.addEventListener('click', event => {
+  event.preventDefault();
   refs.modalMenu.classList.add('is-open');
+  document.body.classList.add('no-scroll');
 });
 
 refs.modalClose.addEventListener('click', () => {
   refs.modalMenu.classList.remove('is-open');
+  document.body.classList.remove('no-scroll');
 });
 
 refs.closeElements.forEach(el => {
   el.addEventListener('click', () => {
     refs.modalMenu.classList.remove('is-open');
+    document.body.classList.remove('no-scroll');
   });
 });

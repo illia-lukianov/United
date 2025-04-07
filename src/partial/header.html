@@ -2,11 +2,14 @@
   <div class="container header-container">
     <div class="header-logo">
       <img
+        class="logo-img"
         src="../img/header/headers.webp"
         srcset="
           ../img/header/headers.webp          1x,
           ../img/header/retina/headers@2x.png 2x
         "
+        width="80"
+        height="80"
         alt="Portfolio owner photo"
       />
       <svg class="" width="84" height="19">
@@ -32,19 +35,22 @@
         </ul>
       </nav>
     </div>
-    <a href="#work-together">
-      <button class="order-project-btn" type="button">Order the project</button>
+    <a href="#work-together" class="order-project-btn">Order the project </a>
+    <a href="" class="burger-lnk">
+      <svg class="burger-svg" width="28" height="28">
+        <use href="../img/logo.svg#burger"></use>
+      </svg>
     </a>
-    <svg class="burger-svg" width="28" height="28">
-      <use href="../img/logo.svg#burger"></use>
-    </svg>
 
     <div class="modal-menu">
-      <svg class="modal-close-svg" width="28" height="28">
-        <use href="../img/logo.svg#modal-close"></use>
-      </svg>
+      <a href="" class="modal-close-lnk">
+        <svg class="modal-close-svg" width="28" height="28">
+          <use href="../img/logo.svg#modal-close"></use>
+        </svg>
+      </a>
+
       <nav class="nav-modal">
-        <ul class="nav-list">
+        <ul class="nav-list-modal">
           <li class="nav-item">
             <a class="nav-link" href="#about-me">About me</a>
           </li>
@@ -59,10 +65,8 @@
           </li>
         </ul>
       </nav>
-      <a href="#work-together">
-        <button class="order-project-btn-modal" type="button">
-          Order the project
-        </button>
+      <a href="#work-together" class="order-project-btn-modal">
+        Order the project
       </a>
     </div>
   </div>
