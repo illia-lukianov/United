@@ -44,4 +44,3 @@ const swiper = new Swiper('.about-me-swiper', {
 window.addEventListener('resize', () => {
   swiper.update();
 });
-console.log(`Скрипт працює!`);

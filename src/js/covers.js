@@ -2,8 +2,6 @@ const coversRefs = {
   coverList: document.querySelector('.covers-list'),
 };
 
-console.dir(coversRefs.coverList);
-
 window.addEventListener('scroll', coversAnimationBegin);
 
 function coversAnimationBegin() {
