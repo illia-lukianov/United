@@ -54,6 +54,6 @@ workRefs.modal.addEventListener('click', event => {
   if (event.target === modal) closeModal();
 });
 
-workRefs.window.addEventListener('keydown', event => {
+window.addEventListener('keydown', event => {
   if (event.key === 'Escape') closeModal();
 });

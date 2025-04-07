@@ -18,20 +18,25 @@
 }
 .work-title-container {
   margin-bottom: 64px;
+  display: flex;
+  gap: 8px;
+}
+@media only screen and (min-width: 768px) {
+  .work-title-container {
+    gap: 14px;
+    margin-bottom: 17px;
+  }
 }
 .work-avatar {
-  display: inline;
-  margin-right: 8px;
+  height: 44px;
 }
 @media only screen and (min-width: 768px) {
   .work-avatar {
     width: 70px;
     height: 70px;
-    margin-right: 14px;
   }
 }
 .work-title {
-  display: inline;
   font-weight: 500;
   font-size: 40px;
   line-height: 1;
@@ -47,6 +52,17 @@
 }
 .work-title-accent {
   color: var(--accent-color);
+}
+.work-title-second-part {
+  display: block;
+  margin-top: 8px;
+  margin-left: -52px;
+}
+@media only screen and (min-width: 768px) {
+  .work-title-second-part {
+    margin-top: 10px;
+    margin-left: -84px;
+  }
 }
 .work-form {
   margin-bottom: 64px;
