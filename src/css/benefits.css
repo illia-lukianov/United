@@ -48,7 +48,8 @@
   color: var(--main-translucent-color);
 }
 
-.benefits-button {
+.benefits-link {
+  display: inline-block;
   background-color: transparent;
   border: 1px solid var(--dark-accent-color);
   border-radius: 60px;
@@ -59,7 +60,7 @@
   margin-top: 32px;
 }
 
-.benefits-button:hover {
+.benefits-link:is(:hover, :focus) {
   background-color: var(--accent-hover-color);
 }
 /* #endregion */
@@ -74,7 +75,7 @@
     flex-wrap: wrap;
   }
 
-  .benefits-button {
+  .benefits-link {
     margin-top: 64px;
   }
 }
