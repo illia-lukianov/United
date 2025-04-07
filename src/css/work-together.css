@@ -18,20 +18,25 @@
 }
 .work-title-container {
   margin-bottom: 64px;
+  display: flex;
+  gap: 8px;
+}
+@media only screen and (min-width: 768px) {
+  .work-title-container {
+    gap: 14px;
+    margin-bottom: 17px;
+  }
 }
 .work-avatar {
-  display: inline;
-  margin-right: 8px;
+  height: 44px;
 }
 @media only screen and (min-width: 768px) {
   .work-avatar {
     width: 70px;
     height: 70px;
-    margin-right: 14px;
   }
 }
 .work-title {
-  display: inline;
   font-weight: 500;
   font-size: 40px;
   line-height: 1;
@@ -47,6 +52,17 @@
 }
 .work-title-accent {
   color: var(--accent-color);
+}
+.work-title-second-part {
+  display: block;
+  margin-top: 8px;
+  margin-left: -52px;
+}
+@media only screen and (min-width: 768px) {
+  .work-title-second-part {
+    margin-top: 10px;
+    margin-left: -84px;
+  }
 }
 .work-form {
   margin-bottom: 64px;
@@ -145,7 +161,7 @@
   border-color: var(--main-color);
 }
 .work-modal-backdrop {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -153,16 +169,17 @@
   background: rgba(15, 15, 16, 0.6);
   visibility: visible;
   pointer-events: auto;
+  z-index: 999;
+  opacity: 1;
   transform: scale(1);
   transition: ease-in 300ms;
   transition-property: transform, opacity, visibility;
-  opacity: 1;
 }
 .work-modal {
   position: absolute;
-  /* top: 50%; */
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, -50%);
   border: 1px solid rgba(250, 250, 250, 0.1);
   border-radius: 20px;
   background-color: var(--background-color);
@@ -220,4 +237,54 @@
   pointer-events: none;
   transform: scale(0.5);
   opacity: 0;
+}
+.work-message.iziToast.error {
+  background-color: var(--accent-color);
+  color: var(--main-color);
+  font-family: var(--font-family);
+  box-sizing: border-box;
+  min-width: 300px;
+  min-height: 74px;
+  max-width: 500px;
+  padding: 20px;
+}
+.work-message.iziToast.error > .iziToast-body {
+  margin-left: 8px;
+  margin-right: 24px;
+  padding: 0;
+  min-height: 100%;
+}
+.work-message.iziToast.error > .iziToast-body .iziToast-icon {
+  width: 32px;
+  height: 32px;
+  margin-top: -13px;
+}
+.work-message.iziToast.error > .iziToast-body .iziToast-texts {
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+}
+.work-message.iziToast.error > button.iziToast-close {
+  background-size: 16px;
+}
+.work-message.iziToast.error > .iziToast-cover {
+  top: 20px;
+  left: 20px;
+  height: 24px;
+  background-color: transparent;
+}
+
+.work-message.iziToast.error > .iziToast-body .iziToast-title,
+.work-message.iziToast.error > .iziToast-body .iziToast-message {
+  color: var(--main-color);
+  line-height: 18px;
+}
+.work-message.iziToast.error > .iziToast-body .iziToast-message {
+  font-size: 16px;
+  margin: 0;
+}
+.work-message.iziToast.error > .iziToast-body .iziToast-title {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 4px;
 }

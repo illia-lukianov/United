@@ -20,10 +20,12 @@ function closeModal() {
 
 function showError(message) {
   iziToast.error({
+    class: 'work-message error',
     title: 'Error',
+    theme: 'dark',
     message,
     position: 'topCenter',
-    timeout: 4000,
+    timeout: 6000,
   });
 }
 
@@ -44,16 +46,16 @@ workRefs.form.addEventListener('submit', async event => {
     workRefs.form.reset();
     openModal();
   } catch (error) {
-    showError('Failed to send the form. Please check your input.');
+    showError(`Failed to send the form. Please check your input.`);
   }
 });
 
 workRefs.closeBtn.addEventListener('click', closeModal);
 
 workRefs.modal.addEventListener('click', event => {
-  if (event.target === modal) closeModal();
+  if (event.target === workRefs.modal) closeModal();
 });
 
-workRefs.window.addEventListener('keydown', event => {
+window.addEventListener('keydown', event => {
   if (event.key === 'Escape') closeModal();
 });
