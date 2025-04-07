@@ -83,15 +83,12 @@ body {
   background: transparent;
   cursor: pointer;
   position: relative;
-  transition: background 0.3s ease;
+
   color: var(--dark-accent-color);
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.acc.is-active .acc-btn::after {
-  transform: translateY(-50%) rotate(45deg);
 }
 
 .acc-content {
@@ -100,14 +97,12 @@ body {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding 0.3s;
+  padding-bottom: 20px;
 }
 
 .acc.is-active .acc-content {
   max-height: 1000px;
   opacity: 1;
-
-  padding-bottom: 20px;
 }
 .acc-text {
   font-family: 'Inter Tight', sans-serif;
@@ -252,11 +247,13 @@ body {
     margin-bottom: 16px;
   }
   .acc-text:last-child {
-    margin-bottom: 32px;
+    margin-bottom: 0px;
   }
-  .acc.is-active .acc-content {
+
+  .acc-content {
     padding-bottom: 32px;
   }
+
   .about-me-container-swiper {
     width: 100%;
   }
@@ -342,7 +339,7 @@ body {
     margin-bottom: 10px;
   }
   .acc-list .acc-item:last-child {
-    margin-bottom: 32px;
+    margin-bottom: 0;
   }
   .about-me-container-swiper {
     max-width: 1312px;
