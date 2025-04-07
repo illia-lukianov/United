@@ -2,7 +2,7 @@
 const menu = document.querySelector('.menu');
 const nav = document.querySelector('.nav');
 
-menu.addEventListener('click', () => {
+menu.addEventListener('click', event => {
   event.preventDefault();
   nav.classList.toggle('is-open');
 });
@@ -18,29 +18,25 @@ nav.addEventListener('click', () => {
 });
 
 // modal menu mobile //
-const modalBurger = document.querySelector('.burger-svg');
-const modalMenu = document.querySelector('.modal-menu');
-const modalClose = document.querySelector('.modal-close-svg');
-const closeElements = document.querySelectorAll(
-  '.nav-item, .order-project-btn-modal'
-);
+const refs = {
+  modalBurger: document.querySelector('.burger-svg'),
+  modalMenu: document.querySelector('.modal-menu'),
+  modalClose: document.querySelector('.modal-close-svg'),
+  closeElements: document.querySelectorAll(
+    '.nav-item, .order-project-btn-modal'
+  ),
+};
 
-modalBurger.addEventListener('touchstart', () => {
-  modalMenu.classList.add('is-open');
-  document.body.style.overflow = 'hidden';
+refs.modalBurger.addEventListener('click', () => {
+  refs.modalMenu.classList.add('is-open');
 });
 
-function closeMenu() {
-  modalMenu.classList.remove('is-open');
-  document.body.style.overflow = '';
-}
+refs.modalClose.addEventListener('click', () => {
+  refs.modalMenu.classList.remove('is-open');
+});
 
-closeElements.forEach(element => {
-  element.addEventListener('touchstart', () => {
-    setTimeout(() => {
-      closeMenu();
-    }, 300);
+refs.closeElements.forEach(el => {
+  el.addEventListener('click', () => {
+    refs.modalMenu.classList.remove('is-open');
   });
 });
-
-modalClose.addEventListener('touchstart', closeMenu);

@@ -4,7 +4,8 @@ header {
   position: absolute;
   left: 0px;
   right: 0px;
-  top: 20px;
+  top: 32px;
+  z-index: 1;
 }
 
 .header-container {
@@ -100,7 +101,7 @@ header {
   display: none;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
-  background-image: url('../img/hero/hero-mobile-background.webp');
+  background-image: url('../img/mobile-menu/red-menu-hero-mob@1x.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

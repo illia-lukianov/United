@@ -1,0 +1,239 @@
+.work-together {
+  padding-top: 64px;
+}
+@media only screen and (min-width: 768px) {
+  .work-together {
+    padding-top: 133px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .work-together {
+    padding-top: 167px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .work-container {
+    padding: 0 196px;
+  }
+}
+.work-title-container {
+  margin-bottom: 64px;
+  display: flex;
+  gap: 8px;
+}
+@media only screen and (min-width: 768px) {
+  .work-title-container {
+    gap: 14px;
+    margin-bottom: 17px;
+  }
+}
+.work-avatar {
+  height: 44px;
+}
+@media only screen and (min-width: 768px) {
+  .work-avatar {
+    width: 70px;
+    height: 70px;
+  }
+}
+.work-title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+@media only screen and (min-width: 768px) {
+  .work-title {
+    font-size: 64px;
+    letter-spacing: -0.03em;
+  }
+}
+.work-title-accent {
+  color: var(--accent-color);
+}
+.work-title-second-part {
+  display: block;
+  margin-top: 8px;
+  margin-left: -52px;
+}
+@media only screen and (min-width: 768px) {
+  .work-title-second-part {
+    margin-top: 10px;
+    margin-left: -84px;
+  }
+}
+.work-form {
+  margin-bottom: 64px;
+}
+@media only screen and (min-width: 768px) {
+  .work-form {
+    margin-bottom: 18px;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+}
+.work-form > input {
+  position: relative;
+  width: 100%;
+  height: 44px;
+  border: none;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+  background-color: transparent;
+  transition: border-color 250ms ease-in;
+}
+
+@media only screen and (max-width: 767px) {
+  .work-form > input {
+    margin-bottom: 16px;
+  }
+  .work-form > input:last-child {
+    margin-bottom: 32px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .work-form > input {
+    width: 245px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .work-form > input {
+    width: 390px;
+  }
+  .work-form > input:last-child {
+    margin-right: 86px;
+  }
+}
+.work-form > input:is(:hover, :focus, :active) {
+  border-color: rgba(250, 250, 250, 0.5);
+  outline: none;
+}
+.work-form-btn {
+  min-width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: var(--accent-color);
+  padding: 40px 32px;
+  border: none;
+  transition: background-color 200ms ease-in;
+}
+@media only screen and (min-width: 768px) {
+  .work-form-btn {
+    min-width: 150px;
+    height: 150px;
+    padding: 66px 57px;
+  }
+}
+.work-form-btn:is(:hover, :focus, :active) {
+  background-color: var(--accent-hover-color);
+}
+.work-contacts {
+  display: flex;
+  gap: 4px;
+}
+@media only screen and (min-width: 768px) {
+  .work-contacts {
+    gap: 8px;
+  }
+}
+.work-contacts > a {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  padding: 10px 12px;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  transition: border-color 250ms ease-in;
+}
+@media only screen and (min-width: 768px) {
+  .work-contacts > a {
+    padding: 18px 32px;
+    font-size: 16px;
+  }
+}
+.work-contacts > a:is(:hover, :focus, :active) {
+  border-color: var(--main-color);
+}
+.work-modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 16, 0.6);
+  visibility: visible;
+  pointer-events: auto;
+  transform: scale(1);
+  transition: ease-in 300ms;
+  transition-property: transform, opacity, visibility;
+  opacity: 1;
+}
+.work-modal {
+  position: absolute;
+  /* top: 50%; */
+  left: 50%;
+  transform: translate(-50%, 50%);
+  border: 1px solid rgba(250, 250, 250, 0.1);
+  border-radius: 20px;
+  background-color: var(--background-color);
+  width: 343px;
+  height: 276px;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .work-modal {
+    width: 494px;
+    height: 246px;
+  }
+}
+.work-modal-container {
+  position: relative;
+  padding: 64px 32px;
+}
+@media only screen and (min-width: 768px) {
+  .work-modal-container {
+    padding: 64px;
+  }
+}
+.work-modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+}
+.work-close-icon {
+  stroke: var(--main-color);
+}
+@media only screen and (min-width: 768px) {
+  .work-close-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+.work-modal h3 {
+  letter-spacing: -0.02em;
+
+  color: var(--main-color);
+  margin-bottom: 16px;
+}
+.work-modal p {
+  letter-spacing: -0.02em;
+  color: var(--main-translucent-color);
+}
+
+.work-modal-backdrop.hidden {
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0.5);
+  opacity: 0;
+}

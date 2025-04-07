@@ -1,0 +1,57 @@
+<section class="work-together" id="work-together">
+  <div class="container work-container">
+    <div class="work-title-container">
+      <img
+        src="img/work-together/image-tab-comp.webp"
+        alt="User avatar"
+        class="work-avatar"
+        width="44"
+        height="44"
+        loading="lazy"
+      />
+      <h2 class="work-title">
+        LET’S <span class="work-title-accent">WORK</span><br />
+        <span class="work-title-second-part">TOGETHER</span>
+      </h2>
+    </div>
+
+    <form id="cooperationForm" class="work-form" novalidate>
+      <input
+        type="email"
+        name="emailInput"
+        placeholder="clients@gmail.com"
+        required
+        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+      />
+      <input
+        type="text"
+        name="commentsInput"
+        placeholder="comments"
+        required
+        maxlength="50"
+      />
+      <button type="submit" class="work-form-btn">Send</button>
+    </form>
+
+    <div class="work-contacts">
+      <a href="mailto:lloydjefferson@gmail.com">lloydjefferson@gmail.com</a>
+      <a href="tel:+380111111111">+380 11 1111 11 11</a>
+    </div>
+  </div>
+</section>
+<div id="work-modalBackdrop" class="work-modal-backdrop hidden">
+  <div class="work-modal">
+    <div class="work-modal-container">
+      <button class="work-modal-close-btn" aria-label="Close">
+        <svg class="work-close-icon" width="22" height="22">
+          <use href="../img/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+      <h3>Thank you for your interest in cooperation!</h3>
+      <p>
+        The manager will contact you shortly to discuss further details and
+        opportunities for cooperation. Please stay in touch.
+      </p>
+    </div>
+  </div>
+</div>
