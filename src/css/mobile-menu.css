@@ -60,3 +60,8 @@
 .order-project-btn-modal {
     height: 45px;
 }
+
+.modal-close-svg {
+    stroke: var(--main-color);
+    fill: transparent;
+}
