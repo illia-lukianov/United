@@ -10,6 +10,7 @@
 @import url('./base.css');
 @import url('./container.css');
 @import url('./typography.css');
+@import url('./messages.css');
 
 /* Sections style */
 @import url('./header.css');

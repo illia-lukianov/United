@@ -8,9 +8,6 @@
 .projects-swiper-container {
   overflow: hidden;
 }
-/* .projects-swiper-wrapper {
-  display: flex;
-} */
 
 .projects-item-slides {
   visibility: hidden;

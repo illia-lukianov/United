@@ -7,6 +7,7 @@ const swiper = new Swiper('.projects-swiper-container', {
   modules: [Navigation, Keyboard],
   loop: true,
   loopedSlides: 3,
+  speed: 400,
   slidesPerView: 1,
   spaceBetween: 0,
   navigation: {
