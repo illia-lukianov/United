@@ -1,29 +1,33 @@
 /* #region hero-small-devices */
 @media only screen and (max-width: 340px) {
-    .hero-list {
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-    }
+  .hero-list {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
 }
 /* #endregion */
 /* #region hero-mobile */
 .hero-section {
   padding: 0;
   position: relative;
-  background: linear-gradient(to right,rgba(220, 70, 77, 20)  50%, #1c1d20 50%);
+  background: linear-gradient(
+    to right,
+    rgba(220, 70, 77, 20) 50%,
+    var(--background-color) 50%
+  );
 }
 
 .hero-container {
   padding-top: 281px;
   padding-bottom: 32px;
   background-image: image-set(
-      url('/img/hero/mob/red-background-hero-mob@1x.webp') 1x,
-      url('/img/hero/retina-mob/red-background-hero-mob@2x.webp') 2x,
-    );
+    url('/img/hero/mob/red-background-hero-mob@1x.webp') 1x,
+    url('/img/hero/retina-mob/red-background-hero-mob@2x.webp') 2x
+  );
   background-repeat: no-repeat;
   background-position: left;
-  background-size: cover;
+  background-size: contain;
   background-color: var(--background-color);
 }
 
@@ -65,15 +69,14 @@
   align-content: center;
   padding: 10px 12px;
 }
- /* #endregion */
+/* #endregion */
 /* #region hero-tablet */
 @media only screen and (min-width: 768px) {
-  .hero {
-    background-image:
-      image-set(
-        url('/img/hero/tab/red-background-hero-tab@1x.webp') 1x,
-        url('/img/hero/retina-tab/red-background-hero-tab@2x.webp') 2x,
-      )
+  .hero-container {
+    background-image: image-set(
+      url('/img/hero/tab/red-background-hero-tab@1x.webp') 1x,
+      url('/img/hero/retina-tab/red-background-hero-tab@2x.webp') 2x
+    );
   }
 
   .hero-container {
@@ -116,16 +119,16 @@
 /* #endregion */
 /* #region hero-desktop */
 @media only screen and (min-width: 1440px) {
-  .hero {
+  .hero-container {
     background-image: image-set(
-        url('/img/hero/comp/red-background-hero-comp@1x.webp') 1x,
-        url('/img/hero/retina-comp/red-background-hero-comp@2x.webp') 2x,
-      )
-    }
+      url('/img/hero/comp/red-background-hero-comp@1x.webp') 1x,
+      url('/img/hero/retina-comp/red-background-hero-comp@2x.webp') 2x
+    );
+  }
 
   .hero-title {
     max-width: 1084px;
     margin: 0 auto 243px;
   }
 }
- /* #endregion */
+/* #endregion */

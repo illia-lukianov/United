@@ -19,7 +19,7 @@
   background-color: #242527;
   border-radius: 20px;
   padding: 24px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .benefits-icon {
@@ -34,7 +34,8 @@
 }
 
 .benefits-icon svg {
-  fill: var(--main-color);
+  fill: transparent;
+  stroke: var(--main-color);
 }
 
 .benefits-card-title {
@@ -47,7 +48,8 @@
   color: var(--main-translucent-color);
 }
 
-.benefits-button {
+.benefits-link {
+  display: inline-block;
   background-color: transparent;
   border: 1px solid var(--dark-accent-color);
   border-radius: 60px;
@@ -58,28 +60,28 @@
   margin-top: 32px;
 }
 
-.benefits-button:hover {
+.benefits-link:is(:hover, :focus) {
   background-color: var(--accent-hover-color);
 }
 /* #endregion */
 /* #region benefits Tablet */
-@media (min-width: 768px) {  
+@media (min-width: 768px) {
   .benefits-card {
     width: calc(50% - 8px);
   }
-  
+
   .benefits-grid {
     flex-direction: row;
     flex-wrap: wrap;
   }
 
-  .benefits-button {
+  .benefits-link {
     margin-top: 64px;
   }
 }
 /* #endregion */
 /* #region benefits desktop */
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
   .benefits-container {
     display: flex;
     flex-direction: row;
