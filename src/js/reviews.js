@@ -4,7 +4,7 @@ import 'swiper/css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-import { getReviews } from './api';
+import { getReviews } from './reviews-api';
 
 const reviewsRefs = {
   list: document.querySelector('.reviews-list'),
