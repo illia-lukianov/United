@@ -360,5 +360,9 @@ body {
 
     flex-shrink: 0;
   }
+  .swiper-arrow-next {
+    width: 40px;
+    height: 40px;
+  }
 }
 /* #endregion */
