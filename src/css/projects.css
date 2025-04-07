@@ -158,8 +158,8 @@
     flex-direction: row;
   }
   .projects-item-slides-first-part {
-    max-width: 688px;
-    max-height: 625px;
+    min-width: 688px;
+    min-height: 625px;
     padding: 64px 64px;
     margin: 0;
     border-radius: 24px 0 0 24px;
@@ -170,7 +170,7 @@
   .projects-item-slides-second-part {
     padding: 120px 37px;
     border-radius: 0 24px 24px 0;
-    max-width: 688px;
+    min-width: 688px;
   }
 }
 /* #endregion */
