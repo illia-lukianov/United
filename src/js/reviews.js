@@ -6,18 +6,24 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 import { getReviews } from './api';
 
-const list = document.querySelector('.reviews-list');
-const swiperContainer = document.querySelector('.reviews-swiper');
-const nextButtonRev = document.querySelector('.reviews-next-btn');
-const prevButtonRev = document.querySelector('.reviews-prev-btn');
+const reviewsRefs = {
+  list: document.querySelector('.reviews-list'),
+  swiperContainer: document.querySelector('.reviews-swiper'),
+};
+let reviewsImagesIsLoaded = false;
+let reviewsHasBeenSeen = false;
+
+window.addEventListener('scroll', reviewsErrorCheck);
 
 function renderReview({ avatar_url, author, review }) {
   return `<li class="reviews-item swiper-slide">
-              <img class="reviews-item-img" src="${avatar_url}" alt="Ihor Trachuk" width="48" height="48" />
-              <h3 class="reviews-item-title">${author}</h3>
-              <p class="reviews-item-text">
-                ${review}
-              </p>
+              <div class="swiper-slide-transform">
+                <img class="reviews-item-img" src="${avatar_url}" alt="Ihor Trachuk" width="48" height="48" />
+                <h3 class="reviews-item-title">${author}</h3>
+                <p class="reviews-item-text">
+                  ${review}
+                </p>
+              </div>
           </li>`;
 }
 function renderReviews(reviewsArr) {
@@ -31,7 +37,7 @@ function renderErrorText() {
   span.textContent = 'Not found';
   span.classList.add('reviews-text-error');
   itemError.appendChild(span);
-  list.appendChild(itemError);
+  reviewsRefs.list.appendChild(itemError);
 }
 
 document.addEventListener('DOMContentLoaded', handleReviews);
@@ -40,21 +46,40 @@ async function handleReviews() {
   try {
     const review = await getReviews();
     const markup = renderReviews(review);
-    list.insertAdjacentHTML('beforeend', markup);
+    reviewsRefs.list.insertAdjacentHTML('beforeend', markup);
+    reviewsImagesIsLoaded = true;
   } catch (error) {
-    console.error('Error :', error);
     renderErrorText();
-    iziToast.info({
-      close: false,
-      position: 'topRight',
-      message: 'Error!',
-    });
+    reviewsImagesIsLoaded = false;
   }
 }
 
-const swiper = new Swiper(swiperContainer, {
+function reviewsErrorCheck() {
+  if (!reviewsImagesIsLoaded && !reviewsHasBeenSeen) {
+    const { top, bottom } = reviewsRefs.swiperContainer.getBoundingClientRect();
+    const { innerHeight } = window;
+    if (
+      (top > 0 && (top < innerHeight || bottom <= 0)) ||
+      (bottom > 0 && (bottom < innerHeight || top <= 0))
+    ) {
+      reviewsHasBeenSeen = true;
+
+      iziToast.error({
+        class: 'work-message error',
+        title: 'Error',
+        theme: 'dark',
+        message: 'Failed to load images.',
+        position: 'topCenter',
+        timeout: 6000,
+      });
+    }
+  }
+}
+
+const swiper = new Swiper(reviewsRefs.swiperContainer, {
   modules: [Navigation],
   slidesPerView: 1,
+  speed: 400,
   spaceBetween: 16,
   keyboard: {
     enabled: true,
@@ -64,12 +89,10 @@ const swiper = new Swiper(swiperContainer, {
   breakpoints: {
     768: {
       slidesPerView: 2,
-      spaceBetween: 18,
     },
 
     1440: {
       slidesPerView: 4,
-      spaceBetween: 16,
     },
   },
   direction: 'horizontal',
@@ -78,37 +101,3 @@ const swiper = new Swiper(swiperContainer, {
     prevEl: '.reviews-prev-btn',
   },
 });
-
-const nextButtRevonObserver = new MutationObserver(mutations => {
-  mutations.forEach(mutation => {
-    if (mutation.attributeName === 'class') {
-      const disabled = nextButtonRev.classList.contains(
-        'swiper-button-disabled'
-      );
-      if (disabled) {
-        nextButtonRev.style.opacity = '0.5';
-      } else {
-        nextButtonRev.style.opacity = '1';
-      }
-    }
-  });
-});
-
-nextButtRevonObserver.observe(nextButtonRev, { attributes: true });
-
-const prevButtRevonObserver = new MutationObserver(mutations => {
-  mutations.forEach(mutation => {
-    if (mutation.attributeName === 'class') {
-      const disabled = prevButtonRev.classList.contains(
-        'swiper-button-disabled'
-      );
-      if (disabled) {
-        prevButtonRev.style.opacity = '0.5';
-      } else {
-        prevButtonRev.style.opacity = '1';
-      }
-    }
-  });
-});
-
-prevButtRevonObserver.observe(prevButtonRev, { attributes: true });
