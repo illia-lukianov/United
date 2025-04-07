@@ -28,8 +28,8 @@
     <symbol id="icon-small-arrow-down" viewBox="0 0 32 32">
       <path stroke-width="3.2" d="m24 12-8 8-8-8"/>
     </symbol>
-    <symbol id="icon-mobile-menu-open" viewBox="0 0 32 32">
-      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M3.429 11.429h24M3.429 20.762h24"></path>
+    <symbol id="icon-mobile-menu-open" viewBox="0 0 28 28">
+      <path stroke="#FAFAFA" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.5 9.917h21m-21 8.166h21"/>
     </symbol>
     <symbol id="icon-mobile-menu-close" viewBox="0 0 32 32">
       <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M24 8l-16 16"></path>

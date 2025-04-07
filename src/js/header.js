@@ -19,9 +19,9 @@ nav.addEventListener('click', () => {
 
 // modal menu mobile //
 const refs = {
-  modalBurger: document.querySelector('.burger-lnk'),
+  modalBurger: document.querySelector('.burger-btn'),
   modalMenu: document.querySelector('.modal-menu'),
-  modalClose: document.querySelector('.modal-close-lnk'),
+  modalClose: document.querySelector('.modal-close-btn'),
   closeElements: document.querySelectorAll(
     '.nav-item, .order-project-btn-modal'
   ),
@@ -44,3 +44,19 @@ refs.closeElements.forEach(el => {
     document.body.classList.remove('no-scroll');
   });
 });
+
+const themeToggle = document.querySelector(".themes-toggle");
+const themesMenu = document.querySelector(".overlay-themes-menu");
+const themesOptions = document.querySelectorAll(".themes-option");
+
+themeToggle.addEventListener('click', () => {
+    themesMenu.classList.toggle('is-active');
+})
+
+themesMenu.addEventListener('click', (event) => {
+    themesOptions.forEach((option) => {
+        option.classList.remove('is-active');
+    })
+  event.target.classList.add('is-active');
+  document.documentElement.dataset.theme = event.target.dataset.theme; 
+})

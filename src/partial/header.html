@@ -3,17 +3,17 @@
     <div class="header-logo">
       <img
         class="logo-img"
-        src="../img/header/headers.webp"
+        src="/img/header/headers.webp"
         srcset="
-          ../img/header/headers.webp          1x,
-          ../img/header/retina/headers@2x.png 2x
+          /img/header/headers.webp          1x,
+          /img/header/retina/headers@2x.png 2x
         "
         width="80"
         height="80"
         alt="Portfolio owner photo"
       />
-      <svg class="" width="84" height="19">
-        <use href="../img/logo.svg#logo"></use>
+      <svg class="header-logo-icon" width="84" height="19">
+        <use href="/img/logo.svg#logo"></use>
       </svg>
     </div>
     <div class="menu-tablet-desktop">
@@ -35,39 +35,28 @@
         </ul>
       </nav>
     </div>
-    <a href="#work-together" class="order-project-btn">Order the project </a>
-    <a href="" class="burger-lnk">
-      <svg class="burger-svg" width="28" height="28">
-        <use href="../img/logo.svg#burger"></use>
-      </svg>
-    </a>
-
-    <div class="modal-menu">
-      <a href="" class="modal-close-lnk">
-        <svg class="modal-close-svg" width="28" height="28">
-          <use href="../img/logo.svg#modal-close"></use>
+    <div class="header-right-side">
+      <div class="theme-container">
+        <button class="themes-toggle">
+          <svg class="themes-switcher-icon">
+            <use href="/img/sprite.svg#icon-small-arrow-down"></use>
+          </svg>
+        </button>
+        <div class="overlay-themes-menu">
+          <div class="themes-option" data-theme="blue"></div>
+          <div class="themes-option" data-theme="red"></div>
+          <div class="themes-option" data-theme="red-orange"></div>
+          <div class="themes-option" data-theme="dark-green"></div>
+          <div class="themes-option" data-theme="yellow"></div>
+          <div class="themes-option" data-theme="orange"></div>
+        </div>
+      </div>
+      <a href="#work-together" class="order-project-btn">Order the project </a>
+      <button class="burger-btn">
+        <svg class="burger-svg" width="28" height="28">
+          <use href="img/sprite.svg#icon-mobile-menu-open"></use>
         </svg>
-      </a>
-
-      <nav class="nav-modal">
-        <ul class="nav-list-modal">
-          <li class="nav-item">
-            <a class="nav-link" href="#about-me">About me</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#benefits">Benefits</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#FAQ">FAQ</a>
-          </li>
-        </ul>
-      </nav>
-      <a href="#work-together" class="order-project-btn-modal">
-        Order the project
-      </a>
+      </button>
     </div>
   </div>
 </header>

@@ -27,6 +27,9 @@ header {
   flex-direction: row;
   gap: 8px;
 }
+.header-logo-icon{
+  fill: var(--main-color);
+}
 
 .logo-img {
   object-fit: none;
@@ -34,9 +37,6 @@ header {
 /* #endregion */
 
 /* #region tablet and desktop menu */
-.menu-tablet-desktop {
-  position: relative;
-}
 
 .menu {
   display: none;
@@ -46,6 +46,7 @@ header {
 
 .nav {
   display: flex;
+  height: 0;
   gap: 5px;
   visibility: hidden;
   overflow: hidden;
@@ -64,10 +65,13 @@ header {
   gap: 5px;
 }
 
-.nav.is-open {
-  visibility: visible;
-  transform: translateY(0);
-  transition: visibility 0s, transform 0.4s ease;
+@media only screen and (min-width: 768px) {
+  .nav.is-open {
+    visibility: visible;
+    transform: translateY(0);
+    height: auto;
+    transition: visibility 0s, transform 0.4s ease;
+  }
 }
 /* #endregion */
 
@@ -97,6 +101,17 @@ header {
 .order-project-btn:hover {
   background-color: var(--accent-hover-color);
 }
+.burger-btn{ 
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.burger-svg {
+  fill: var(--main-color);
+}
 /* #endregion */
 
 /* #region media screen */
@@ -107,7 +122,7 @@ header {
     margin-bottom: 18px;
   }
 
-  .burger-lnk {
+  .burger-btn {
     display: none;
   }
 
@@ -117,62 +132,133 @@ header {
     justify-content: center;
   }
 }
-
 /* #endregion */
 
-/* #region modal menu */
-.modal-menu {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: translateY(-20px);
-  transition: opacity 0.4s ease, visibility 0.4s ease;
-
+/* #region theme-toggle */
+.header-right-side {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  gap: 8px;
   align-items: center;
-  text-align: center;
-
-  padding-bottom: 64px;
-  background-image: url('../img/mobile-menu/red-menu-hero-mob@1x.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1000;
 }
 
-.modal-menu.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateY(0);
+.theme-container {
+  position: relative;
 }
 
-.modal-close-lnk {
-  margin-left: auto;
-  margin-right: 16px;
-  margin-top: 32px;
-}
-
-.nav-modal {
-  text-decoration: underline;
-}
-
-.nav-list-modal {
+.themes-toggle {
+  background-color: inherit;
+  border: 1px solid #3B3B3B;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
 }
 
-.order-project-btn-modal {
-  height: 45px;
+.themes-switcher-icon {
+  width: 20px;
+  height: 20px;
+  fill: #FAFAFA;
+  transition: transform 0.5s ease-in-out;
+}
+
+.themes-option {
+  border: 1px solid #242527;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+.overlay-themes-menu {
+  position: absolute;
+  top: 35px;
+  transform: translateX(-23%);
+  display: none;
+  background-color: #3B3B3B;
+  border: 1px solid #242527;
+  border-radius: 6px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 6px;
+}
+
+.overlay-themes-menu.is-active {
+  display: flex;
+}
+
+.themes-option {
+  display: flex;
+}
+
+.themes-option.is-active {
+  border: 2px solid #ED3B44;
+}
+
+.themes-option:nth-child(1) {
+  background: linear-gradient(-90deg, #1C1D20 43%, #001958 63%, #0041E8 100%);
+}
+
+.themes-option:nth-child(2) {
+  background: linear-gradient(-90deg, #1C1D20 43%, #69292D 63%, #ED3B44 100%);
+}
+
+.themes-option:nth-child(3) {
+  background: linear-gradient(-90deg, #1C1D20 43%, #9F3626 63%, #E6533C 100%);
+}
+
+.themes-option:nth-child(4) {
+  background: linear-gradient(-90deg, #1C1D20 43%, #1E3633 63%, #2B4441 100%);
+}
+
+.themes-option:nth-child(5) {
+  background: linear-gradient(-90deg, #1C1D20 43%, #355A1A 63%, #4E7A2E 100%);
+}
+
+.themes-option:nth-child(6) {
+  background: linear-gradient(-90deg, #1C1D20 43%, #AC5300 63%, #FF7F08 100%);
+}
+
+@media only screen and (min-width:768px) {
+  .header-right-side {
+    gap: 12px;
+  }
+
+  .themes-toggle {
+    width: 55px;
+    height: 55px;
+  }
+
+  .themes-switcher-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .overlay-themes-menu {
+    top: 62px;
+    transform: translateX(0%);
+  }
+  
+  .themes-option {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .themes-option {
+      width: 48px;
+      height: 48px;
+    }
+  
+    .overlay-themes-menu {
+      width: 130px;
+      gap: 8px;
+      top: 72px;
+    }
 }
 /* #endregion */

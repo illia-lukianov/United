@@ -13,7 +13,7 @@
   position: relative;
   background: linear-gradient(
     to right,
-    rgba(220, 70, 77, 20) 50%,
+    var(--accent-color) 50%,
     var(--background-color) 50%
   );
 }
@@ -22,14 +22,15 @@
   padding-top: 281px;
   padding-bottom: 32px;
   background-image: image-set(
-    url('/img/hero/mob/red-background-hero-mob@1x.webp') 1x,
-    url('/img/hero/retina-mob/red-background-hero-mob@2x.webp') 2x
+    var(--background-image-mob1x) 1x,
+    var(--background-image-mob2x) 2x
   );
   background-repeat: no-repeat;
   background-position: left;
   background-size: contain;
   background-color: var(--background-color);
 }
+
 
 .hero-title {
   letter-spacing: -0.03em;
@@ -38,6 +39,15 @@
   margin-bottom: 212px;
 }
 
+@media only screen and (max-width: 345px) {
+  .hero-container{
+    padding-top: 250px;
+  }
+
+  .hero-title {
+    margin-bottom: 180px;
+  }
+}
 .hero-nav {
   display: flex;
   justify-content: center;
@@ -74,8 +84,8 @@
 @media only screen and (min-width: 768px) {
   .hero-container {
     background-image: image-set(
-      url('/img/hero/tab/red-background-hero-tab@1x.webp') 1x,
-      url('/img/hero/retina-tab/red-background-hero-tab@2x.webp') 2x
+      var(--background-image-tab1x) 1x,
+        var(--background-image-tab2x) 2x
     );
   }
 
@@ -121,8 +131,8 @@
 @media only screen and (min-width: 1440px) {
   .hero-container {
     background-image: image-set(
-      url('/img/hero/comp/red-background-hero-comp@1x.webp') 1x,
-      url('/img/hero/retina-comp/red-background-hero-comp@2x.webp') 2x
+      var(--background-image-comp1x) 1x,
+      var(--background-image-comp2x) 2x
     );
   }
 
