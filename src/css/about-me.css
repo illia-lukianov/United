@@ -83,15 +83,12 @@ body {
   background: transparent;
   cursor: pointer;
   position: relative;
-  transition: background 0.3s ease;
+  
   color: var(--dark-accent-color);
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.acc.is-active .acc-btn::after {
-  transform: translateY(-50%) rotate(45deg);
 }
 
 .acc-content {
@@ -100,7 +97,7 @@ body {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding 0.3s;
+  
 }
 
 .acc.is-active .acc-content {
