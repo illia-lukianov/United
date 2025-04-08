@@ -12,6 +12,10 @@ const swiper = new Swiper('.projects-swiper-container', {
     nextEl: '.projects-next-btn',
     prevEl: '.projects-prev-btn',
   },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
 });
 
 function updateNavigationButtons() {

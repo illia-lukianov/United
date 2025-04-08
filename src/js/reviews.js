@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
@@ -77,15 +77,19 @@ function reviewsErrorCheck() {
 }
 
 const swiper = new Swiper(reviewsRefs.swiperContainer, {
-  modules: [Navigation],
+  modules: [Navigation, Keyboard],
+  direction: 'horizontal',
   slidesPerView: 1,
   speed: 400,
   spaceBetween: 16,
+  navigation: {
+    nextEl: '.reviews-next-btn',
+    prevEl: '.reviews-prev-btn',
+  },
   keyboard: {
     enabled: true,
     onlyInViewport: false,
   },
-
   breakpoints: {
     768: {
       slidesPerView: 2,
@@ -94,10 +98,5 @@ const swiper = new Swiper(reviewsRefs.swiperContainer, {
     1440: {
       slidesPerView: 4,
     },
-  },
-  direction: 'horizontal',
-  navigation: {
-    nextEl: '.reviews-next-btn',
-    prevEl: '.reviews-prev-btn',
   },
 });

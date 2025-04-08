@@ -61,7 +61,7 @@
 .acc-btn {
   width: 100%;
   padding-left: 0;
-  padding-bottom: 24px;
+
   padding-top: 0px;
   font-weight: 600;
   font-size: 16px;
@@ -80,6 +80,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: padding ease-in 300ms;
 }
 
 .acc-content {
@@ -89,6 +90,10 @@
   opacity: 0;
   overflow: hidden;
   padding-bottom: 20px;
+}
+
+.acc.is-active .acc-btn {
+  padding-bottom: 24px;
 }
 
 .acc.is-active .acc-content {
@@ -113,7 +118,7 @@
   padding: 0;
   margin: 0;
 }
-.acc-item.acc-item {
+.acc-item {
   margin-bottom: 8px;
 }
 
@@ -130,7 +135,7 @@
 
 .acc-arrow {
   stroke: var(--main-color);
-  transition: transform 0.45s ease;
+  transition: transform ease-in 300ms;
   transform-origin: center;
 }
 
@@ -231,8 +236,12 @@
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    padding-bottom: 32px;
+
     font-size: 18px;
+  }
+  .acc-arrow-circle {
+    width: 40px;
+    height: 40px;
   }
   .acc-text {
     margin-bottom: 16px;
@@ -240,7 +249,9 @@
   .acc-text:last-child {
     margin-bottom: 0px;
   }
-
+  .acc.is-active .acc-btn {
+    padding-bottom: 8px;
+  }
   .acc-content {
     padding-bottom: 32px;
   }
@@ -297,20 +308,14 @@
     margin-top: 96px;
     margin-bottom: 96px;
   }
-  .acc {
-    margin-bottom: 20px;
-  }
 
   .acc-btn {
     width: 100%;
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    padding-bottom: 32px;
+
     font-size: 18px;
-  }
-  .acc.is-active .acc-btn {
-    padding-bottom: 8px;
   }
 
   .acc-content {
@@ -320,6 +325,7 @@
     flex-direction: column;
     justify-content: right;
     margin-left: auto;
+    padding-top: 8px;
     margin-right: 68px;
   }
 

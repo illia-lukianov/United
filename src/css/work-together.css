@@ -3,12 +3,13 @@
 }
 @media only screen and (min-width: 768px) {
   .work-together {
-    padding-top: 133px;
+    padding-top: 128px;
+    padding-bottom: 169px;
   }
 }
 @media only screen and (min-width: 1440px) {
   .work-together {
-    padding-top: 167px;
+    padding-top: 162px;
   }
 }
 @media only screen and (min-width: 1440px) {
