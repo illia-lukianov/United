@@ -5,7 +5,9 @@
   transform: translateY(-20px);
   transition: 0.3s ease;
   transition-property: opacity, transform, visibility;
-
+  background: linear-gradient(to right,
+        var(--accent-color) 50%,
+        var(--background-color) 50%);;
   position: fixed;
   top: 0;
   left: 0;

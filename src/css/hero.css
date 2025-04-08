@@ -39,14 +39,9 @@
 }
 
 @media only screen and (max-width: 345px) {
-  .hero-container {
-    padding-top: 28%;
-  }
-
   .hero-title {
     margin-left: 8%;
     font-size: 36px;
-    margin-bottom: 20%;
   }
 }
 .hero-nav {
