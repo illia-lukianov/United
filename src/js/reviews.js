@@ -18,7 +18,7 @@ window.addEventListener('scroll', reviewsErrorCheck);
 function renderReview({ avatar_url, author, review }) {
   return `<li class="reviews-item swiper-slide">
               <div class="swiper-slide-transform">
-                <img class="reviews-item-img" src="${avatar_url}" alt="Ihor Trachuk" width="48" height="48" />
+                <img class="reviews-item-img" src="${avatar_url}" alt="${author} photo" width="48" height="48" loading="lazy" />
                 <h3 class="reviews-item-title">${author}</h3>
                 <p class="reviews-item-text">
                   ${review}
