@@ -45,11 +45,11 @@
 
     <ul class="about-me-accordion-wrapper">
       <li class="acc">
-        <h2 class="acc-header">
-
+        <h3 class="acc-header">
           <button
             type="button"
             class="acc-btn"
+            aria-label="Open description"
             aria-expanded="false"
             aria-controls="about-me-content"
           >
@@ -60,7 +60,7 @@
               </svg>
             </span>
           </button>
-        </h2>
+        </h3>
         <div class="acc-content" id="about-me-content">
           <p class="acc-text">
             I am Lloyd Jefferson, a talented programmer with extensive expertise
@@ -89,10 +89,11 @@
 
       <!-- Блок "Role" -->
       <li class="acc">
-        <h2>
+        <h3 class="acc-header">
           <button
             type="button"
             class="acc-btn"
+            aria-label="Open description"
             aria-expanded="false"
             aria-controls="role-content"
           >
@@ -119,14 +120,14 @@
 
       <!-- Блок "Education" -->
       <li class="acc">
-        <h2>
-
+        <h3 class="acc-header">
           <button
             type="button"
             class="acc-btn"
+            aria-label="Open description"
             aria-expanded="false"
             aria-controls="education-content"
-          >
+          >Education
             <span class="acc-arrow-circle">
               <svg class="acc-arrow" width="18" height="18">
                 <use href="/img/sprite.svg#icon-small-arrow-down"></use>
@@ -190,11 +191,11 @@
           </li>
         </ul>
       </div>
-      <div class="swiper-button-next">
+      <button class="swiper-button-next" aria-label="Next slide">
         <svg class="swiper-arrow-next" width="28" height="28">
           <use href="/img/sprite.svg#icon-arrow-narrow-right"></use>
         </svg>
-      </div>
+      </button>
     </div>
   </div>
 </section>
