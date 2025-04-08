@@ -26,9 +26,15 @@
     var(--background-image-mob2x) 2x
   );
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: left top;
   background-size: contain;
   background-color: var(--background-color);
+}
+
+@media only screen and (max-width: 375px) {
+  .hero-container {
+    background-size: auto 100%;
+  }
 }
 
 .hero-title {

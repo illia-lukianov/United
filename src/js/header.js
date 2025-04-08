@@ -47,7 +47,7 @@ refs.closeElements.forEach(el => {
 
 const themeToggle = document.querySelector(".themes-toggle");
 const themesMenu = document.querySelector(".overlay-themes-menu");
-const themesOptions = document.querySelectorAll(".themes-option");
+const themesOptions = [...document.querySelectorAll(".themes-option")];
 const THEME_KEY = "theme-color";
 
 
