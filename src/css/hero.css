@@ -31,7 +31,6 @@
   background-color: var(--background-color);
 }
 
-
 .hero-title {
   letter-spacing: -0.03em;
   text-transform: uppercase;
@@ -40,12 +39,14 @@
 }
 
 @media only screen and (max-width: 345px) {
-  .hero-container{
-    padding-top: 250px;
+  .hero-container {
+    padding-top: 28%;
   }
 
   .hero-title {
-    margin-bottom: 180px;
+    margin-left: 8%;
+    font-size: 36px;
+    margin-bottom: 20%;
   }
 }
 .hero-nav {
@@ -65,18 +66,12 @@
   font-size: 14px;
   letter-spacing: -0.02em;
   border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 50%;
-  width: 37px;
+  border-radius: 60px;
   height: 37px;
+  min-width: 37px;
 }
 
 .hero-email {
-  font-size: 14px;
-  line-height: 1;
-  letter-spacing: -0.02em;
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 60px;
-  align-content: center;
   padding: 10px 12px;
 }
 /* #endregion */
@@ -85,7 +80,7 @@
   .hero-container {
     background-image: image-set(
       var(--background-image-tab1x) 1x,
-        var(--background-image-tab2x) 2x
+      var(--background-image-tab2x) 2x
     );
   }
 
@@ -108,14 +103,12 @@
 
   .hero-item-link {
     font-size: 16px;
-    width: 55px;
+    min-width: 55px;
     height: 55px;
     transition: border 300ms ease;
   }
 
   .hero-email {
-    font-size: 16px;
-    transition: border 300ms ease;
     padding: 18px 24px;
   }
 
