@@ -27,9 +27,6 @@ header {
   flex-direction: row;
   gap: 8px;
 }
-.header-logo-icon{
-  fill: var(--main-color);
-}
 
 .logo-img {
   object-fit: none;
@@ -101,7 +98,7 @@ header {
 .order-project-btn:hover {
   background-color: var(--accent-hover-color);
 }
-.burger-btn{ 
+.burger-btn {
   background-color: transparent;
   display: flex;
   justify-content: center;
@@ -147,7 +144,7 @@ header {
 
 .themes-toggle {
   background-color: inherit;
-  border: 1px solid #3B3B3B;
+  border: 1px solid #3b3b3b;
   border-radius: 50%;
   width: 28px;
   height: 28px;
@@ -160,7 +157,7 @@ header {
 .themes-switcher-icon {
   width: 20px;
   height: 20px;
-  fill: #FAFAFA;
+  fill: #fafafa;
   transition: transform 0.5s ease-in-out;
 }
 
@@ -176,7 +173,7 @@ header {
   top: 35px;
   transform: translateX(-23%);
   display: none;
-  background-color: #3B3B3B;
+  background-color: #3b3b3b;
   border: 1px solid #242527;
   border-radius: 6px;
   flex-direction: row;
@@ -196,34 +193,34 @@ header {
 }
 
 .themes-option.is-active {
-  border: 2px solid #ED3B44;
+  border: 2px solid #ed3b44;
 }
 
 .themes-option:nth-child(1) {
-  background: linear-gradient(-90deg, #1C1D20 43%, #001958 63%, #0041E8 100%);
+  background: linear-gradient(-90deg, #1c1d20 43%, #001958 63%, #0041e8 100%);
 }
 
 .themes-option:nth-child(2) {
-  background: linear-gradient(-90deg, #1C1D20 43%, #69292D 63%, #ED3B44 100%);
+  background: linear-gradient(-90deg, #1c1d20 43%, #69292d 63%, #ed3b44 100%);
 }
 
 .themes-option:nth-child(3) {
-  background: linear-gradient(-90deg, #1C1D20 43%, #9F3626 63%, #E6533C 100%);
+  background: linear-gradient(-90deg, #1c1d20 43%, #9f3626 63%, #e6533c 100%);
 }
 
 .themes-option:nth-child(4) {
-  background: linear-gradient(-90deg, #1C1D20 43%, #1E3633 63%, #2B4441 100%);
+  background: linear-gradient(-90deg, #1c1d20 43%, #1e3633 63%, #2b4441 100%);
 }
 
 .themes-option:nth-child(5) {
-  background: linear-gradient(-90deg, #1C1D20 43%, #355A1A 63%, #4E7A2E 100%);
+  background: linear-gradient(-90deg, #1c1d20 43%, #355a1a 63%, #4e7a2e 100%);
 }
 
 .themes-option:nth-child(6) {
-  background: linear-gradient(-90deg, #1C1D20 43%, #AC5300 63%, #FF7F08 100%);
+  background: linear-gradient(-90deg, #1c1d20 43%, #ac5300 63%, #ff7f08 100%);
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width: 768px) {
   .header-right-side {
     gap: 12px;
   }
@@ -242,23 +239,23 @@ header {
     top: 62px;
     transform: translateX(0%);
   }
-  
+
   .themes-option {
     width: 42px;
     height: 42px;
   }
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width: 768px) {
   .themes-option {
-      width: 48px;
-      height: 48px;
-    }
-  
-    .overlay-themes-menu {
-      width: 130px;
-      gap: 8px;
-      top: 72px;
-    }
+    width: 48px;
+    height: 48px;
+  }
+
+  .overlay-themes-menu {
+    width: 130px;
+    gap: 8px;
+    top: 72px;
+  }
 }
 /* #endregion */
