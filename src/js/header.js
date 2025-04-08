@@ -48,15 +48,25 @@ refs.closeElements.forEach(el => {
 const themeToggle = document.querySelector(".themes-toggle");
 const themesMenu = document.querySelector(".overlay-themes-menu");
 const themesOptions = document.querySelectorAll(".themes-option");
+const THEME_KEY = "theme-color";
 
+
+document.addEventListener("DOMContentLoaded", setTheme)
 themeToggle.addEventListener('click', () => {
     themesMenu.classList.toggle('is-active');
 })
 
 themesMenu.addEventListener('click', (event) => {
-    themesOptions.forEach((option) => {
-        option.classList.remove('is-active');
-    })
+  themesOptions.forEach((option) => {
+    option.classList.remove('is-active');
+  });
+  localStorage.setItem(THEME_KEY, event.target.dataset.theme);
   event.target.classList.add('is-active');
   document.documentElement.dataset.theme = event.target.dataset.theme; 
 })
+
+function setTheme() {
+  const themeColor = localStorage.getItem(THEME_KEY) ?? themesOptions[1].dataset.theme;
+  document.documentElement.dataset.theme = themeColor;
+  themesOptions.find((option) => option.dataset.theme === themeColor).classList.add('is-active');
+}

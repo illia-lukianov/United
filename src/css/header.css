@@ -9,7 +9,7 @@
 }
 @media only screen and (max-width: 345px) {
   .header {
-    top: 16px;
+    top: 20px;
   }
 }
 
@@ -191,8 +191,9 @@
 .overlay-themes-menu {
   position: absolute;
   top: 35px;
-  transform: translateX(-23%);
-  display: none;
+  display: flex;
+  overflow: hidden;
+  left: -13px;
   background-color: #3b3b3b;
   border: 1px solid #242527;
   border-radius: 6px;
@@ -202,10 +203,19 @@
   justify-content: center;
   padding: 10px;
   gap: 6px;
+  transform: translateY(-20%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: ease-in 0.3s;
+  transition-property: transform, opacity, visibility;
 }
 
 .overlay-themes-menu.is-active {
-  display: flex;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  opacity: 1;
 }
 
 .themes-option {
@@ -256,26 +266,15 @@
   }
 
   .overlay-themes-menu {
-    top: 62px;
-    transform: translateX(0%);
+    top: 72px;
+    left: -2px;
+    gap: 8px;
+    width: 130px;
   }
 
-  .themes-option {
-    width: 42px;
-    height: 42px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
   .themes-option {
     width: 48px;
     height: 48px;
-  }
-
-  .overlay-themes-menu {
-    width: 130px;
-    gap: 8px;
-    top: 72px;
   }
 }
 /* #endregion */
