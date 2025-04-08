@@ -40,11 +40,13 @@
 
 @media only screen and (max-width: 345px) {
   .hero-container {
-    padding-top: 250px;
+    padding-top: 28%;
   }
 
   .hero-title {
-    margin-bottom: 180px;
+    margin-left: 8%;
+    font-size: 36px;
+    margin-bottom: 20%;
   }
 }
 .hero-nav {
