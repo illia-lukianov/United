@@ -25,7 +25,7 @@
     <script type="module" crossorigin src="/team-projects-js-united/index.js"></script>
     <link rel="modulepreload" crossorigin href="/team-projects-js-united/assets/vendor-BAf7YG4r.js">
     <link rel="stylesheet" crossorigin href="/team-projects-js-united/assets/vendor-B7goKWir.css">
-    <link rel="stylesheet" crossorigin href="/team-projects-js-united/assets/index-49Y4TxrC.css">
+    <link rel="stylesheet" crossorigin href="/team-projects-js-united/assets/index-DtIe6xRu.css">
   </head>
   <body>
     <header class="header">
@@ -68,7 +68,7 @@
     </div>
     <div class="header-right-side">
       <div class="theme-container">
-        <button class="themes-toggle">
+        <button class="themes-toggle" aria-label="Change theme">
           <svg class="themes-switcher-icon">
             <use href="/team-projects-js-united/assets/sprite-W3eMurFf.svg#icon-small-arrow-down"></use>
           </svg>
@@ -83,7 +83,7 @@
         </div>
       </div>
       <a href="#work-together" class="order-project-btn">Order the project </a>
-      <button class="burger-btn">
+      <button class="burger-btn" aria-label="Open mobile menu">
         <svg class="burger-svg" width="28" height="28">
           <use href="/team-projects-js-united/assets/sprite-W3eMurFf.svg#icon-mobile-menu-open"></use>
         </svg>
@@ -217,11 +217,11 @@
 
     <ul class="about-me-accordion-wrapper">
       <li class="acc">
-        <h2 class="acc-header">
-
+        <h3 class="acc-header">
           <button
             type="button"
             class="acc-btn"
+            aria-label="Open description"
             aria-expanded="false"
             aria-controls="about-me-content"
           >
@@ -232,7 +232,7 @@
               </svg>
             </span>
           </button>
-        </h2>
+        </h3>
         <div class="acc-content" id="about-me-content">
           <p class="acc-text">
             I am Lloyd Jefferson, a talented programmer with extensive expertise
@@ -261,10 +261,11 @@
 
       <!-- Блок "Role" -->
       <li class="acc">
-        <h2>
+        <h3 class="acc-header">
           <button
             type="button"
             class="acc-btn"
+            aria-label="Open description"
             aria-expanded="false"
             aria-controls="role-content"
           >
@@ -291,14 +292,14 @@
 
       <!-- Блок "Education" -->
       <li class="acc">
-        <h2>
-
+        <h3 class="acc-header">
           <button
             type="button"
             class="acc-btn"
+            aria-label="Open description"
             aria-expanded="false"
             aria-controls="education-content"
-          >
+          >Education
             <span class="acc-arrow-circle">
               <svg class="acc-arrow" width="18" height="18">
                 <use href="/team-projects-js-united/assets/sprite-W3eMurFf.svg#icon-small-arrow-down"></use>
@@ -362,11 +363,11 @@
           </li>
         </ul>
       </div>
-      <div class="swiper-button-next">
+      <button class="swiper-button-next" aria-label="Next slide">
         <svg class="swiper-arrow-next" width="28" height="28">
           <use href="/team-projects-js-united/assets/sprite-W3eMurFf.svg#icon-arrow-narrow-right"></use>
         </svg>
-      </div>
+      </button>
     </div>
   </div>
 </section>
@@ -554,12 +555,12 @@
       </ul>
     </div>
     <div class="projects-prev-next-buttons">
-      <button class="projects-prev-btn">
+      <button class="projects-prev-btn" aria-label="Previous slide">
         <svg class="icon-arrow-left" width="24" height="24">
           <use href="/team-projects-js-united/assets/sprite-W3eMurFf.svg#icon-arrow-left"></use>
         </svg>
       </button>
-      <button class="projects-next-btn">
+      <button class="projects-next-btn" aria-label="Next slide">
         <svg class="icon-arrow-right" width="24" height="24">
           <use href="/team-projects-js-united/assets/sprite-W3eMurFf.svg#icon-arrow-right"></use>
         </svg>
@@ -577,7 +578,11 @@
           <h3 class="faq-item-title">
             What programming languages are most often used in your project?
           </h3>
-          <button type="button" class="faq-item-toggle">
+          <button
+            type="button"
+            class="faq-item-toggle"
+            aria-label="Open description"
+          >
             <svg class="arrow-icon" width="18" height="18">
               <use href="/team-projects-js-united/assets/sprite-W3eMurFf.svg#icon-small-arrow-down"></use>
             </svg>
@@ -595,7 +600,11 @@
           <h3 class="faq-item-title">
             What are the deadlines for the project?
           </h3>
-          <button type="button" class="faq-item-toggle">
+          <button
+            type="button"
+            class="faq-item-toggle"
+            aria-label="Open description"
+          >
             <svg class="arrow-icon" width="18" height="18">
               <use href="/team-projects-js-united/assets/sprite-W3eMurFf.svg#icon-small-arrow-down"></use>
             </svg>
@@ -613,7 +622,11 @@
       <li class="faq-item">
         <div class="faq-item-visible-container">
           <h3 class="faq-item-title">What payment methods do you accept?</h3>
-          <button type="button" class="faq-item-toggle">
+          <button
+            type="button"
+            class="faq-item-toggle"
+            aria-label="Open description"
+          >
             <svg class="arrow-icon" width="18" height="18">
               <use href="/team-projects-js-united/assets/sprite-W3eMurFf.svg#icon-small-arrow-down"></use>
             </svg>
@@ -629,7 +642,11 @@
       <li class="faq-item">
         <div class="faq-item-visible-container">
           <h3 class="faq-item-title">How can I contact you?</h3>
-          <button type="button" class="faq-item-toggle">
+          <button
+            type="button"
+            class="faq-item-toggle"
+            aria-label="Open description"
+          >
             <svg class="arrow-icon" width="18" height="18">
               <use href="/team-projects-js-united/assets/sprite-W3eMurFf.svg#icon-small-arrow-down"></use>
             </svg>
@@ -645,7 +662,11 @@
       <li class="faq-item">
         <div class="faq-item-visible-container">
           <h3 class="faq-item-title">Do you provide advice or support?</h3>
-          <button type="button" class="faq-item-toggle">
+          <button
+            type="button"
+            class="faq-item-toggle"
+            aria-label="Open description"
+          >
             <svg class="arrow-icon" width="18" height="18">
               <use href="/team-projects-js-united/assets/sprite-W3eMurFf.svg#icon-small-arrow-down"></use>
             </svg>
@@ -666,7 +687,11 @@
             What does the process of developing a software product look like
             from idea to implementation?
           </h3>
-          <button type="button" class="faq-item-toggle">
+          <button
+            type="button"
+            class="faq-item-toggle"
+            aria-label="Open description"
+          >
             <svg class="arrow-icon" width="18" height="18">
               <use href="/team-projects-js-united/assets/sprite-W3eMurFf.svg#icon-small-arrow-down"></use>
             </svg>
@@ -936,12 +961,16 @@
       <ul class="reviews-list swiper-wrapper"></ul>
     </div>
     <div class="reviews-buttons">
-      <button class="reviews-prev-btn" type="button">
+      <button
+        class="reviews-prev-btn"
+        type="button"
+        aria-label="Previous slide"
+      >
         <svg class="reviews-icon" width="24" height="24">
           <use href="/team-projects-js-united/assets/sprite-W3eMurFf.svg#icon-arrow-left" />
         </svg>
       </button>
-      <button class="reviews-next-btn" type="button">
+      <button class="reviews-next-btn" type="button" aria-label="Next slide">
         <svg class="reviews-icon" width="24" height="24">
           <use href="/team-projects-js-united/assets/sprite-W3eMurFf.svg#icon-arrow-right" />
         </svg>
