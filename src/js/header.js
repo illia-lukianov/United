@@ -53,20 +53,28 @@ const THEME_KEY = "theme-color";
 
 document.addEventListener("DOMContentLoaded", setTheme)
 themeToggle.addEventListener('click', () => {
-    themesMenu.classList.toggle('is-active');
+  themesMenu.classList.toggle('is-active');
+  if (themesMenu.classList.contains('is-active')) {
+    themesMenu.addEventListener('click', changeTheme)
+  } else {
+    themesMenu.removeEventListener('click', changeTheme)
+  }
 })
 
-themesMenu.addEventListener('click', (event) => {
-  themesOptions.forEach((option) => {
-    option.classList.remove('is-active');
-  });
-  localStorage.setItem(THEME_KEY, event.target.dataset.theme);
-  event.target.classList.add('is-active');
-  document.documentElement.dataset.theme = event.target.dataset.theme; 
-})
 
 function setTheme() {
   const themeColor = localStorage.getItem(THEME_KEY) ?? themesOptions[1].dataset.theme;
   document.documentElement.dataset.theme = themeColor;
   themesOptions.find((option) => option.dataset.theme === themeColor).classList.add('is-active');
+}
+
+function changeTheme(event) {
+  if (themesOptions.includes(event.target)) {
+    themesOptions.forEach((option) => {
+      option.classList.remove('is-active');
+    });
+    localStorage.setItem(THEME_KEY, event.target.dataset.theme);
+    event.target.classList.add('is-active');
+    document.documentElement.dataset.theme = event.target.dataset.theme;
+  }
 }
