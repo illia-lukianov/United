@@ -78,6 +78,10 @@
 /* #endregion */
 /* #region benefits desktop */
 @media (min-width: 1440px) {
+  .benefits-title {
+    margin-bottom: 0;
+  }
+  
   .benefits-container {
     display: flex;
     flex-direction: row;

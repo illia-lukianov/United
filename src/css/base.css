@@ -1,4 +1,5 @@
 :root {
+  background-color: var(--background-color);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -25,17 +26,16 @@ body {
   margin: 0;
 }
 
-section {
-  background-color: var(--background-color);
+.section {
   padding: 32px 0;
 }
 @media only screen and (min-width: 768px) {
-  section {
+  .section {
     padding: 48px 0;
   }
 }
 @media only screen and (min-width: 1440px) {
-  section {
+  .section {
     padding: 82px 0;
   }
 }
