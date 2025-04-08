@@ -80,7 +80,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: padding 0.3s ease;
+  transition: padding ease-in 300ms;
 }
 
 .acc-content {
@@ -135,7 +135,7 @@
 
 .acc-arrow {
   stroke: var(--main-color);
-  transition: transform 0.45s ease;
+  transition: transform ease-in 300ms;
   transform-origin: center;
 }
 
@@ -238,6 +238,10 @@
     padding-top: 0;
 
     font-size: 18px;
+  }
+  .acc-arrow-circle {
+    width: 40px;
+    height: 40px;
   }
   .acc-text {
     margin-bottom: 16px;
