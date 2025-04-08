@@ -29,6 +29,7 @@ header {
 }
 .header-logo-icon{
   fill: var(--main-color);
+  height: 19px;
 }
 
 .logo-img {
