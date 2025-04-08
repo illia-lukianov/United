@@ -10,7 +10,7 @@ const reviewsRefs = {
   list: document.querySelector('.reviews-list'),
   swiperContainer: document.querySelector('.reviews-swiper'),
 };
-let reviewsImagesIsLoaded = false;
+let reviewsImagesIsLoaded = true;
 let reviewsHasBeenSeen = false;
 
 window.addEventListener('scroll', reviewsErrorCheck);
