@@ -25,7 +25,7 @@
     <script type="module" crossorigin src="/team-projects-js-united/index.js"></script>
     <link rel="modulepreload" crossorigin href="/team-projects-js-united/assets/vendor-BAf7YG4r.js">
     <link rel="stylesheet" crossorigin href="/team-projects-js-united/assets/vendor-B7goKWir.css">
-    <link rel="stylesheet" crossorigin href="/team-projects-js-united/assets/index-DvlWDHBM.css">
+    <link rel="stylesheet" crossorigin href="/team-projects-js-united/assets/index-49Y4TxrC.css">
   </head>
   <body>
     <header class="header">
@@ -968,14 +968,21 @@
     </div>
 
     <form id="cooperationForm" class="work-form" novalidate>
-      <input
-        type="email"
-        name="emailInput"
-        class="work-email-input"
-        placeholder="clients@gmail.com"
-        required
-        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-      />
+      <div class="input-email-wrapper">
+        <input
+          type="email"
+          name="emailInput"
+          class="work-email-input"
+          placeholder="clients@gmail.com"
+          required
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+          autocomplete="off"
+        />
+        <span class="validation-message success-msg">Success!</span>
+        <span class="validation-message error-msg"
+          >Invalid email, try again</span
+        >
+      </div>
       <input
         type="text"
         name="commentsInput"
