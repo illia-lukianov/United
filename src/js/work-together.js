@@ -6,8 +6,44 @@ const workRefs = {
   form: document.getElementById('cooperationForm'),
   modal: document.getElementById('work-modalBackdrop'),
   closeBtn: document.querySelector('.work-modal-close-btn'),
+  successMsg: document.querySelector('.success-msg'),
+  errorMsg: document.querySelector('.error-msg'),
+  emailInput: document.querySelector('[name="emailInput"]'),
 };
+function validateEmail() {
+  const emailRegex = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+  const isValid = emailRegex.test(workRefs.emailInput.value);
 
+  workRefs.emailInput.classList.remove('valid', 'invalid');
+
+  // Додаємо нові класи в залежності від стану
+  if (isValid) {
+    workRefs.emailInput.classList.add('valid');
+  } else if (workRefs.emailInput.value !== '') {
+    workRefs.emailInput.classList.add('invalid');
+  }
+
+  // Оновлюємо повідомлення
+  workRefs.successMsg.classList.toggle('visible', isValid);
+  workRefs.errorMsg.classList.toggle('visible', !isValid);
+
+  return isValid;
+}
+document.addEventListener('DOMContentLoaded', () => {
+  workRefs.emailInput.value = '';
+  workRefs.emailInput.classList.remove('valid', 'invalid');
+  workRefs.successMsg.classList.remove('visible');
+  workRefs.errorMsg.classList.remove('visible');
+});
+workRefs.emailInput.addEventListener('input', () => {
+  if (workRefs.emailInput.value === '') {
+    workRefs.emailInput.classList.remove('valid', 'invalid');
+    workRefs.successMsg.classList.remove('visible');
+    workRefs.errorMsg.classList.remove('visible');
+  } else {
+    validateEmail();
+  }
+});
 function openModal() {
   workRefs.modal.classList.remove('hidden');
   document.body.style.overflow = 'hidden';
@@ -43,11 +79,15 @@ function showError(message) {
   });
 }
 
+// Модифікований обробник сабміту
 workRefs.form.addEventListener('submit', async event => {
   event.preventDefault();
 
-  if (!workRefs.form.checkValidity()) {
-    workRefs.form.reportValidity();
+  // Валідація перед відправкою
+  const isEmailValid = validateEmail();
+
+  if (!workRefs.form.checkValidity() || !isEmailValid) {
+    workRefs.errorMsg.classList.add('visible');
     return;
   }
 
@@ -56,6 +96,11 @@ workRefs.form.addEventListener('submit', async event => {
 
   try {
     await axios.post('https://jsonplaceholder.typicode.com/posts', data);
+
+    // Скидання стану валідації
+    workRefs.emailInput.classList.remove('valid', 'invalid');
+    workRefs.successMsg.classList.remove('visible');
+    workRefs.errorMsg.classList.remove('visible');
 
     workRefs.form.reset();
     openModal();

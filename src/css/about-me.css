@@ -58,6 +58,10 @@
 
   overflow: hidden;
 }
+.acc-header {
+  font-size: 16px;
+  color: var(--second-title-color);
+}
 .acc-btn {
   width: 100%;
   padding-left: 0;
@@ -149,7 +153,6 @@
 
 .about-me-container-swiper {
   width: 100%;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -162,6 +165,7 @@
   max-width: 260px;
   position: relative;
 }
+
 .about-me-swiper .about-me-swiper-slide {
   margin-right: 0;
 }
@@ -187,6 +191,10 @@
 }
 .about-me-container-swiper .swiper-button-next {
   cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.about-me-container-swiper .swiper-arrow-next {
   stroke: #3b3b3b;
   fill: transparent;
 }
@@ -345,8 +353,8 @@
     overflow: hidden;
   }
   .about-me-swiper.skills-swiper {
-    max-width: 1200px;
-    margin-right: 72px;
+    max-width: 1224px;
+    margin-right: 48px;
   }
   .about-me-swiper .swiper-slide-transform {
     width: 200px;

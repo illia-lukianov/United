@@ -26,9 +26,15 @@
     var(--background-image-mob2x) 2x
   );
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: left top;
   background-size: contain;
   background-color: var(--background-color);
+}
+
+@media only screen and (max-width: 375px) {
+  .hero-container {
+    background-size: auto 100%;
+  }
 }
 
 .hero-title {
@@ -39,14 +45,9 @@
 }
 
 @media only screen and (max-width: 345px) {
-  .hero-container {
-    padding-top: 28%;
-  }
-
   .hero-title {
     margin-left: 8%;
     font-size: 36px;
-    margin-bottom: 20%;
   }
 }
 .hero-nav {
