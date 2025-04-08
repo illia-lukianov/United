@@ -61,7 +61,7 @@
 .acc-btn {
   width: 100%;
   padding-left: 0;
-  padding-bottom: 24px;
+
   padding-top: 0px;
   font-weight: 600;
   font-size: 16px;
@@ -80,6 +80,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: padding 0.3s ease;
 }
 
 .acc-content {
@@ -89,6 +90,10 @@
   opacity: 0;
   overflow: hidden;
   padding-bottom: 20px;
+}
+
+.acc.is-active .acc-btn {
+  padding-bottom: 24px;
 }
 
 .acc.is-active .acc-content {
@@ -231,7 +236,7 @@
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    padding-bottom: 32px;
+
     font-size: 18px;
   }
   .acc-text {
@@ -240,7 +245,9 @@
   .acc-text:last-child {
     margin-bottom: 0px;
   }
-
+  .acc.is-active .acc-btn {
+    padding-bottom: 8px;
+  }
   .acc-content {
     padding-bottom: 32px;
   }
@@ -297,16 +304,13 @@
     margin-top: 96px;
     margin-bottom: 96px;
   }
-  .acc {
-    margin-bottom: 20px;
-  }
 
   .acc-btn {
     width: 100%;
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    padding-bottom: 32px;
+
     font-size: 18px;
   }
 
@@ -317,6 +321,7 @@
     flex-direction: column;
     justify-content: right;
     margin-left: auto;
+    padding-top: 8px;
     margin-right: 68px;
   }
 
