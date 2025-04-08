@@ -1,6 +1,48 @@
 .work-together {
   padding-top: 64px;
 }
+.input-email-wrapper {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .input-email-wrapper {
+    margin-bottom: 0;
+  }
+}
+
+.validation-message {
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+  font-size: 12px;
+  display: none;
+}
+
+.success-msg {
+  color: #4caf50; /* Зелений колір */
+}
+
+.error-msg {
+  color: #f44336; /* Червоний колір */
+}
+
+.validation-message.visible {
+  display: block;
+}
+.input-email-wrapper input.valid {
+  border-bottom-color: #4caf50;
+}
+
+.input-email-wrapper input.invalid {
+  border-bottom-color: #f44336;
+}
+@media only screen and (max-width: 767px) {
+  .work-form > .input-wrapper {
+    margin-bottom: 32px;
+  }
+}
 @media only screen and (min-width: 768px) {
   .work-together {
     padding-top: 128px;
@@ -82,6 +124,22 @@
 .work-email-input:-webkit-autofill:active {
   transition: all 50000s ease-in-out 0s;
 }
+.input-email-wrapper input {
+  position: relative;
+  width: 100%;
+  height: 44px;
+  border: none;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+  background-color: transparent;
+  transition: border-color 250ms ease-in;
+  outline: none;
+}
+
 .work-form > input {
   position: relative;
   width: 100%;
@@ -122,7 +180,22 @@
   border-color: rgba(250, 250, 250, 0.5);
   outline: none;
 }
+.input-email-wrapper input.valid,
+.input-email-wrapper input.valid:hover,
+.input-email-wrapper input.valid:focus,
+.input-email-wrapper input.valid:active {
+  border-bottom-color: #4caf50;
+}
 
+.input-email-wrapper input.invalid,
+.input-email-wrapper input.invalid:hover,
+.input-email-wrapper input.invalid:focus,
+.input-email-wrapper input.invalid:active {
+  border-bottom-color: #f44336;
+}
+.input-email-wrapper input:not(.valid, .invalid):is(:hover, :focus, :active) {
+  border-color: rgba(250, 250, 250, 0.5);
+}
 .work-form-btn {
   min-width: 100px;
   height: 100px;

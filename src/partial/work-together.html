@@ -16,14 +16,21 @@
     </div>
 
     <form id="cooperationForm" class="work-form" novalidate>
-      <input
-        type="email"
-        name="emailInput"
-        class="work-email-input"
-        placeholder="clients@gmail.com"
-        required
-        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-      />
+      <div class="input-email-wrapper">
+        <input
+          type="email"
+          name="emailInput"
+          class="work-email-input"
+          placeholder="clients@gmail.com"
+          required
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+          autocomplete="off"
+        />
+        <span class="validation-message success-msg">Success!</span>
+        <span class="validation-message error-msg"
+          >Invalid email, try again</span
+        >
+      </div>
       <input
         type="text"
         name="commentsInput"
