@@ -46,7 +46,13 @@
     <ul class="about-me-accordion-wrapper">
       <li class="acc">
         <h2 class="acc-header">
-          <button type="button" class="acc-btn">
+
+          <button
+            type="button"
+            class="acc-btn"
+            aria-expanded="false"
+            aria-controls="about-me-content"
+          >
             About Me
             <span class="acc-arrow-circle">
               <svg class="acc-arrow" width="18" height="18">
@@ -55,7 +61,7 @@
             </span>
           </button>
         </h2>
-        <div class="acc-content">
+        <div class="acc-content" id="about-me-content">
           <p class="acc-text">
             I am Lloyd Jefferson, a talented programmer with extensive expertise
             in software development. I have an understanding of different
@@ -64,7 +70,6 @@
             unconventional, creative solutions to problems. I have a high level
             of analytical skills and am able to effectively solve even the most
             difficult tasks encountered on the way.
-            <!-- ваш текст тут -->
           </p>
 
           <p class="acc-text">
@@ -85,7 +90,12 @@
       <!-- Блок "Role" -->
       <li class="acc">
         <h2>
-          <button type="button" class="acc-btn">
+          <button
+            type="button"
+            class="acc-btn"
+            aria-expanded="false"
+            aria-controls="role-content"
+          >
             Role
             <span class="acc-arrow-circle">
               <svg class="acc-arrow" width="18" height="18">
@@ -94,7 +104,7 @@
             </span>
           </button>
         </h2>
-        <div class="acc-content">
+        <div class="acc-content" id="role-content">
           <ul class="acc-list">
             <li class="acc-item">
               <p class="acc-text">Frontend development</p>
@@ -110,9 +120,13 @@
       <!-- Блок "Education" -->
       <li class="acc">
         <h2>
-          <button type="button" class="acc-btn">
-            Education
 
+          <button
+            type="button"
+            class="acc-btn"
+            aria-expanded="false"
+            aria-controls="education-content"
+          >
             <span class="acc-arrow-circle">
               <svg class="acc-arrow" width="18" height="18">
                 <use href="/img/sprite.svg#icon-small-arrow-down"></use>
@@ -120,7 +134,7 @@
             </span>
           </button>
         </h2>
-        <div class="acc-content">
+        <div class="acc-content" id="education-content">
           <ul class="acc-list">
             <li class="acc-item">
               <p class="acc-text">

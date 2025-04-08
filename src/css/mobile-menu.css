@@ -1,67 +1,69 @@
 .modal-menu {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transform: translateY(-20px);
-    transition: 0.3s ease;
-    transition-property: opacity, transform, visibility;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: 0.3s ease;
+  transition-property: opacity, transform, visibility;
 
-    padding-bottom: 64px;
-    background-image: image-set(
-    var(--background-image-menu1x) 1x,
-    var(--background-image-menu2x) 2x
-    );
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
 }
 
 .modal-menu.is-open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
 }
+.mobile-menu-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
 
+  padding-bottom: 64px;
+  background-image: image-set(
+    var(--background-image-menu1x) 1x,
+    var(--background-image-menu2x) 2x
+  );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .modal-close-btn {
-    margin-left: auto;
-    margin-right: 16px;
-    margin-top: 32px;
-    border: none;
-    background-color: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin-left: auto;
+  margin-right: 16px;
+  margin-top: 32px;
+  border: none;
+  background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-modal {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .nav-list-modal {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .order-project-btn-modal {
-    height: 45px;
+  height: 45px;
 }
 
 .modal-close-svg {
-    stroke: var(--main-color);
-    fill: transparent;
+  stroke: var(--main-color);
+  fill: transparent;
 }

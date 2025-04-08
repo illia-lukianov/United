@@ -19,11 +19,6 @@ body {
   line-height: 1.5;
   font-weight: 400;
   color: var(--main-color);
-  display: flex;
-  flex-direction: column;
-  min-width: 100vw;
-  min-height: 100vh;
-  margin: 0;
 }
 
 .section {

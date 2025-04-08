@@ -11,11 +11,25 @@ const workRefs = {
 function openModal() {
   workRefs.modal.classList.remove('hidden');
   document.body.style.overflow = 'hidden';
+  workRefs.closeBtn.addEventListener('click', closeModal);
+
+  workRefs.modal.addEventListener('click', closeModal);
+
+  window.addEventListener('keydown', closeModal);
 }
 
-function closeModal() {
-  workRefs.modal.classList.add('hidden');
-  document.body.style.overflow = '';
+function closeModal(event) {
+  if (
+    event.key === 'Escape' ||
+    event.target === workRefs.modal ||
+    event.currentTarget == workRefs.closeBtn
+  ) {
+    workRefs.modal.classList.add('hidden');
+    document.body.style.overflow = '';
+    workRefs.closeBtn.removeEventListener('click', closeModal);
+    workRefs.modal.removeEventListener('click', closeModal);
+    window.removeEventListener('keydown', closeModal);
+  }
 }
 
 function showError(message) {
@@ -48,14 +62,4 @@ workRefs.form.addEventListener('submit', async event => {
   } catch (error) {
     showError(`Failed to send the form. Please check your input.`);
   }
-});
-
-workRefs.closeBtn.addEventListener('click', closeModal);
-
-workRefs.modal.addEventListener('click', event => {
-  if (event.target === workRefs.modal) closeModal();
-});
-
-window.addEventListener('keydown', event => {
-  if (event.key === 'Escape') closeModal();
 });
