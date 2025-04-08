@@ -31,6 +31,9 @@ header {
 .logo-img {
   object-fit: none;
 }
+.header-logo-icon {
+  height: 19px;
+}
 /* #endregion */
 
 /* #region tablet and desktop menu */
