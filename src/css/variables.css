@@ -33,3 +33,59 @@
   --background-image-menu1x: url('/img/mobile-menu/blue-menu-hero-mob@1x.webp');
   --background-image-menu2x: url('/img/mobile-menu/blue-menu-hero-mob@2x.webp');
 } 
+
+[data-theme="red-orange"] {
+  --accent-color: #E6533C;
+  --accent-hover-color: #e86a56;
+  --accent-dark-color: #9F3626;
+  --background-image-mob1x: url("/img/hero/mob/red-orange-background-hero-mob@1x.webp");
+  --background-image-mob2x: url('/img/hero/retina-mob/red-orange-background-hero-mob@2x.webp');
+  --background-image-tab1x: url('/img/hero/tab/red-orange-background-hero-tab@1x.webp');
+  --background-image-tab2x: url('/img/hero/retina-tab/red-orange-background-hero-tab@2x.webp');
+  --background-image-comp1x: url('/img/hero/comp/red-orange-background-hero-comp@1x.webp');
+  --background-image-comp2x: url('/img/hero/retina-comp/red-orange-background-hero-comp@2x.webp');
+  --background-image-menu1x: url('/img/mobile-menu/red-orange-menu-hero-mob@1x.webp');
+  --background-image-menu2x: url('/img/mobile-menu/red-orange-menu-hero-mob@2x.webp');
+}
+
+[data-theme="dark-green"] {
+  --accent-color: #2B4441;
+  --accent-hover-color: #354e4b;
+  --accent-dark-color: #1E3633;
+  --background-image-mob1x: url("/img/hero/mob/dark-green-background-hero-mob@1x.webp");
+  --background-image-mob2x: url('/img/hero/retina-mob/dark-green-background-hero-mob@2x.webp');
+  --background-image-tab1x: url('/img/hero/tab/dark-green-background-hero-tab@1x.webp');
+  --background-image-tab2x: url('/img/hero/retina-tab/dark-green-background-hero-tab@2x.webp');
+  --background-image-comp1x: url('/img/hero/comp/dark-green-background-hero-comp@1x.webp');
+  --background-image-comp2x: url('/img/hero/retina-comp/dark-green-background-hero-comp@2x.webp');
+  --background-image-menu1x: url('/img/mobile-menu/dark-green-menu-hero-mob@1x.webp');
+  --background-image-menu2x: url('/img/mobile-menu/dark-green-menu-hero-mob@2x.webp');
+}
+
+[data-theme="yellow"] {
+  --accent-color: #b5c650;
+  --accent-hover-color: #bac96a;
+  --accent-dark-color: #596808;
+  --background-image-mob1x: url("/img/hero/mob/yellow-background-hero-mob@1x.webp");
+  --background-image-mob2x: url('/img/hero/retina-mob/yellow-background-hero-mob@2x.webp');
+  --background-image-tab1x: url('/img/hero/tab/yellow-background-hero-tab@1x.webp');
+  --background-image-tab2x: url('/img/hero/retina-tab/yellow-background-hero-tab@2x.webp');
+  --background-image-comp1x: url('/img/hero/comp/yellow-background-hero-comp@1x.webp');
+  --background-image-comp2x: url('/img/hero/retina-comp/yellow-background-hero-comp@2x.webp');
+  --background-image-menu1x: url('/img/mobile-menu/yellow-menu-hero-mob@1x.webp');
+  --background-image-menu2x: url('/img/mobile-menu/yellow-menu-hero-mob@2x.webp');
+}
+
+[data-theme="orange"] {
+  --accent-color: #FF7F08;
+  --accent-hover-color: #ffa44e;
+  --accent-dark-color: #AC5300;
+  --background-image-mob1x: url("/img/hero/mob/orange-background-hero-mob@1x.webp");
+  --background-image-mob2x: url('/img/hero/retina-mob/orange-background-hero-mob@2x.webp');
+  --background-image-tab1x: url('/img/hero/tab/orange-background-hero-tab@1x.webp');
+  --background-image-tab2x: url('/img/hero/retina-tab/orange-background-hero-tab@2x.webp');
+  --background-image-comp1x: url('/img/hero/comp/orange-background-hero-comp@1x.webp');
+  --background-image-comp2x: url('/img/hero/retina-comp/orange-background-hero-comp@2x.webp');
+  --background-image-menu1x: url('/img/mobile-menu/orange-menu-hero-mob@1x.webp');
+  --background-image-menu2x: url('/img/mobile-menu/orange-menu-hero-mob@2x.webp');
+}
