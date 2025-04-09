@@ -54,16 +54,22 @@
 /* #endregion */
 
 /* #region tablet and desktop menu */
+.menu-tablet-desktop {
+  position: relative;
+  display: none;
+}
 
 .menu {
-  display: none;
   text-decoration: underline;
   letter-spacing: -0.02em;
 }
 
 .nav {
+  position: absolute;
+  top: 42px;
+  right: -16px;
   display: flex;
-  height: 0;
+  /* height: 0; */
   gap: 5px;
   visibility: hidden;
   overflow: hidden;
@@ -73,6 +79,9 @@
   text-align: center;
   white-space: nowrap;
   transform: translateY(-20px);
+  opacity: 0;
+  transition: 0.3s ease;
+  transition-property: visibility, opacity, transform;
 }
 
 .nav-list {
@@ -86,8 +95,8 @@
   .nav.is-open {
     visibility: visible;
     transform: translateY(0);
-    height: auto;
-    transition: visibility 0s, transform 0.4s ease;
+    /* height: auto; */
+    opacity: 1;
   }
 }
 /* #endregion */
@@ -133,10 +142,12 @@
 
 /* #region media screen */
 @media only screen and (min-width: 768px) {
+  .menu-tablet-desktop {
+    display: block;
+  }
   .menu {
     display: flex;
     justify-content: center;
-    margin-bottom: 18px;
   }
 
   .burger-btn {
@@ -243,7 +254,7 @@
 }
 
 .themes-option:nth-child(5) {
-  background: linear-gradient(-90deg, #1C1D20 43%, #596808 63%, #C6E327 100%);
+  background: linear-gradient(-90deg, #1c1d20 43%, #596808 63%, #c6e327 100%);
 }
 
 .themes-option:nth-child(6) {
