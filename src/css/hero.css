@@ -113,12 +113,20 @@
     padding: 18px 24px;
   }
 
+@media (hover: hover){
   .hero-email:hover,
   .hero-email:focus,
   .hero-item-link:hover,
   .hero-item-link:focus {
     border: 1px solid #fafafa;
   }
+}
+@media not (hover: hover){
+  .hero-email:active,
+  .hero-item-link:active {
+    border: 1px solid #fafafa;
+  }
+}
 }
 /* #endregion */
 /* #region hero-desktop */

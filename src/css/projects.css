@@ -56,8 +56,18 @@
   padding: 13px 32px;
   background-color: var(--accent-color);
   letter-spacing: -0.02em;
+  transition: background-color 300ms ease-in;
 }
-
+@media (hover: hover) {
+  .projects-button:is(:hover, :focus) {
+    background-color: var(--accent-hover-color);
+  }
+}
+@media not (hover: hover) {
+  .projects-button:active {
+    background-color: var(--accent-hover-color);
+  }
+}
 .projects-item-slides-second-part {
   padding: 100px 16px;
   border-radius: 0 0 24px 24px;
@@ -80,6 +90,19 @@
   width: 52px;
   height: 52px;
   background-color: var(--dark-color);
+  transition: 300ms ease-in;
+  transition-property: opacity, border-color;
+}
+
+@media (hover: hover) {
+  :is(.projects-prev-btn, .projects-next-btn):is(:hover, :focus) {
+    border-color: var(--main-color);
+  }
+}
+@media not (hover: hover) {
+  :is(.projects-prev-btn, .projects-next-btn):active {
+    border-color: var(--main-color);
+  }
 }
 
 .projects-prev-btn:disabled,

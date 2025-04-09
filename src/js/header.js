@@ -55,33 +55,45 @@ function closeMobileMenu() {
   refs.modalBurger.addEventListener('click', openMobileMenu);
 }
 
-const themeToggle = document.querySelector('.themes-toggle');
-const themesMenu = document.querySelector('.overlay-themes-menu');
-const themesOptions = [...document.querySelectorAll('.themes-option')];
+const themeRefs = {
+  themeToggle: document.querySelector('.themes-toggle'),
+  themesMenu: document.querySelector('.overlay-themes-menu'),
+  themesOptions: [...document.querySelectorAll('.themes-option')],
+  heroSection: document.querySelector('.hero-section'),
+};
+
 const THEME_KEY = 'theme-color';
 
 document.addEventListener('DOMContentLoaded', setTheme);
-themeToggle.addEventListener('click', () => {
-  themesMenu.classList.toggle('is-active');
-  if (themesMenu.classList.contains('is-active')) {
-    themesMenu.addEventListener('click', changeTheme);
+themeRefs.themeToggle.addEventListener('click', () => {
+  themeRefs.themesMenu.classList.toggle('is-active');
+  if (themeRefs.themesMenu.classList.contains('is-active')) {
+    themeRefs.themesMenu.addEventListener('click', changeTheme);
+    themeRefs.heroSection.addEventListener('click', closeThemeMenu);
+    window.addEventListener('keydown', closeThemeMenu);
   } else {
-    themesMenu.removeEventListener('click', changeTheme);
+    themeRefs.themesMenu.removeEventListener('click', changeTheme);
+    themeRefs.heroSection.removeEventListener('click', closeThemeMenu);
+    window.removeEventListener('keydown', closeThemeMenu);
   }
 });
-
+function closeThemeMenu(event) {
+  if (event.key === 'Escape' || event.currentTarget === themeRefs.heroSection) {
+    themeRefs.themesMenu.classList.remove('is-active');
+  }
+}
 function setTheme() {
   const themeColor =
-    localStorage.getItem(THEME_KEY) ?? themesOptions[1].dataset.theme;
+    localStorage.getItem(THEME_KEY) ?? themeRefs.themesOptions[1].dataset.theme;
   document.documentElement.dataset.theme = themeColor;
-  themesOptions
+  themeRefs.themesOptions
     .find(option => option.dataset.theme === themeColor)
     .classList.add('is-active');
 }
 
 function changeTheme(event) {
-  if (themesOptions.includes(event.target)) {
-    themesOptions.forEach(option => {
+  if (themeRefs.themesOptions.includes(event.target)) {
+    themeRefs.themesOptions.forEach(option => {
       option.classList.remove('is-active');
     });
     localStorage.setItem(THEME_KEY, event.target.dataset.theme);

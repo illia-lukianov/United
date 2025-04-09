@@ -5,9 +5,11 @@
   transform: translateY(-20px);
   transition: 0.3s ease;
   transition-property: opacity, transform, visibility;
-  background: linear-gradient(to right,
-        var(--accent-color) 50%,
-        var(--background-color) 50%);;
+  background: linear-gradient(
+    to right,
+    var(--accent-color) 50%,
+    var(--background-color) 50%
+  );
   position: fixed;
   top: 0;
   left: 0;
@@ -48,8 +50,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: scale(1);
+  transition: transform 200ms ease-in;
+}
+@media (hover: hover) {
+  .modal-close-btn:hover,
+  .modal-close-btn:focus {
+    animation: animationCloseBtn 0.3s ease-in forwards;
+    transform: scale(1.1);
+  }
 }
 
+@media not (hover: hover) {
+  .modal-close-btn:active {
+    animation: animationCloseBtn 0.3s ease-in forwards;
+    transform: scale(1.1);
+  }
+}
 .nav-modal {
   text-decoration: underline;
 }
@@ -63,6 +80,25 @@
 
 .order-project-btn-modal {
   height: 45px;
+}
+
+@media (hover: hover) {
+  .modal-close-btn:hover,
+  .modal-close-btn:focus {
+    animation: animationCloseBtn 0.3s ease-in forwards;
+    transform: scale(1.1);
+  }
+}
+
+@media (hover: hover) {
+  .order-project-btn-modal:is(:hover, :focus) {
+    background-color: var(--accent-hover-color);
+  }
+}
+@media not (hover: hover) {
+  .order-project-btn-modal:active {
+    background-color: var(--accent-hover-color);
+  }
 }
 
 .modal-close-svg {

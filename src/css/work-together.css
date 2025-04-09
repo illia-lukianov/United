@@ -1,5 +1,7 @@
-.work-together {
-  padding-top: 64px;
+@media only screen and (min-width: 1440px) {
+  .work-container {
+    padding: 0 196px;
+  }
 }
 .input-email-wrapper {
   position: relative;
@@ -45,18 +47,8 @@
 }
 @media only screen and (min-width: 768px) {
   .work-together {
-    padding-top: 128px;
+    padding-top: 80px;
     padding-bottom: 169px;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .work-together {
-    padding-top: 162px;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .work-container {
-    padding: 0 196px;
   }
 }
 .work-title-container {
@@ -114,17 +106,26 @@
   .work-form {
     margin-bottom: 18px;
     display: flex;
-    gap: 32px;
     align-items: center;
   }
 }
 .work-email-input:-webkit-autofill,
 .work-email-input:-webkit-autofill:hover,
 .work-email-input:-webkit-autofill:focus,
-.work-email-input:-webkit-autofill:active {
+.work-email-input:-webkit-autofill:active,
+.work-comments-input:-webkit-autofill,
+.work-comments-input:-webkit-autofill:hover,
+.work-comments-input:-webkit-autofill:focus,
+.work-comments-input:-webkit-autofill:active {
   transition: all 50000s ease-in-out 0s;
 }
-.input-email-wrapper input {
+/* .work-comments-input:-webkit-autofill,
+.work-comments-input:-webkit-autofill:hover,
+.work-comments-input:-webkit-autofill:focus,
+.work-comments-input:-webkit-autofill:active {
+  transition: all 50000s ease-in-out 0s;
+} */
+/* .input-email-wrapper input {
   position: relative;
   width: 100%;
   height: 44px;
@@ -138,9 +139,9 @@
   background-color: transparent;
   transition: border-color 250ms ease-in;
   outline: none;
-}
+} */
 
-.work-form > input {
+.work-form input {
   position: relative;
   width: 100%;
   height: 44px;
@@ -152,28 +153,32 @@
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
   background-color: transparent;
+  outline: none;
   transition: border-color 250ms ease-in;
 }
 
 @media only screen and (max-width: 767px) {
-  .work-form > input {
+  .work-form .input-email-wrapper {
     margin-bottom: 16px;
   }
-  .work-form > input:last-child {
+  .work-form > input {
     margin-bottom: 32px;
   }
 }
 @media only screen and (min-width: 768px) {
-  .work-form > input {
+  .work-form input {
     width: 245px;
+  }
+  .work-form .input-email-wrapper {
+    margin-right: 32px;
+  }
+  .work-form > input {
+    margin-right: auto;
   }
 }
 @media only screen and (min-width: 1440px) {
-  .work-form > input {
+  .work-form input {
     width: 390px;
-  }
-  .work-form > input:last-child {
-    margin-right: 86px;
   }
 }
 .work-form > input:is(:hover, :focus, :active) {
@@ -203,21 +208,30 @@
   background-color: var(--accent-color);
   padding: 40px 32px;
   border: none;
+  line-height: 1;
   transition: background-color 200ms ease-in;
 }
 @media only screen and (min-width: 768px) {
   .work-form-btn {
     min-width: 150px;
     height: 150px;
-    padding: 66px 57px;
+    padding: 65px 57px;
   }
 }
-.work-form-btn:is(:hover, :focus, :active) {
-  background-color: var(--accent-hover-color);
+@media (hover: hover) {
+  .work-form-btn:is(:hover, :focus) {
+    background-color: var(--accent-hover-color);
+  }
+}
+@media not (hover: hover) {
+  .work-form-btn:active {
+    background-color: var(--accent-hover-color);
+  }
 }
 .work-contacts {
   display: flex;
   gap: 4px;
+  line-height: 1;
 }
 @media only screen and (min-width: 768px) {
   .work-contacts {
@@ -238,8 +252,15 @@
     font-size: 16px;
   }
 }
-.work-contacts > a:is(:hover, :focus, :active) {
-  border-color: var(--main-color);
+@media (hover: hover) {
+  .work-contacts > a:is(:hover, :focus) {
+    border-color: var(--main-color);
+  }
+}
+@media not (hover: hover) {
+  .work-contacts > a:active {
+    border-color: var(--main-color);
+  }
 }
 .work-modal-backdrop {
   position: fixed;
@@ -252,21 +273,21 @@
   pointer-events: auto;
   z-index: 999;
   opacity: 1;
-  transform: scale(1);
   transition: ease-in 300ms;
-  transition-property: transform, opacity, visibility;
+  transition-property: opacity, visibility;
 }
 .work-modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
   border: 1px solid rgba(250, 250, 250, 0.1);
   border-radius: 20px;
   background-color: var(--background-color);
   width: 343px;
   height: 276px;
   text-align: center;
+  transition: transform ease-in 300ms;
 }
 @media only screen and (min-width: 768px) {
   .work-modal {
@@ -292,6 +313,22 @@
   justify-content: center;
   border: none;
   background-color: transparent;
+  transform: scale(1);
+  transition: transform 200ms ease-in;
+}
+@media (hover: hover) {
+  .work-modal-close-btn:hover,
+  .work-modal-close-btn:focus {
+    animation: animationCloseBtn 0.3s ease-in forwards;
+    transform: scale(1.1);
+  }
+}
+
+@media not (hover: hover) {
+  .work-modal-close-btn:active {
+    animation: animationCloseBtn 0.3s ease-in forwards;
+    transform: scale(1.1);
+  }
 }
 .work-close-icon {
   stroke: var(--main-color);
@@ -316,6 +353,8 @@
 .work-modal-backdrop.hidden {
   visibility: hidden;
   pointer-events: none;
-  transform: scale(0.5);
   opacity: 0;
+}
+.work-modal-backdrop.hidden .work-modal {
+  transform: translate(-50%, -50%) scale(0.5);
 }
