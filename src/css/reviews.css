@@ -1,3 +1,6 @@
+.reviews {
+  padding-bottom: 64px;
+}
 .reviews-title {
   letter-spacing: -0.02em;
   margin-bottom: 32px;
@@ -25,12 +28,6 @@
   box-sizing: border-box;
   cursor: grab;
   flex-shrink: 0;
-}
-@media only screen and (min-width: 1440px) {
-  .reviews-item > .swiper-slide-transform {
-    width: 332px;
-    height: 353px;
-  }
 }
 .reviews-item-img {
   border-radius: 10px;
@@ -89,7 +86,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 200ms ease-in;
+  transition: 300ms ease-in;
+  transition-property: opacity, border-color;
+}
+@media (hover: hover) {
+  :is(.reviews-next-btn, .reviews-prev-btn):is(:hover, :focus) {
+    border-color: var(--main-color);
+  }
+}
+@media not (hover: hover) {
+  :is(.reviews-next-btn, .reviews-prev-btn):active {
+    border-color: var(--main-color);
+  }
 }
 .reviews-next-btn:disabled,
 .reviews-prev-btn:disabled {
@@ -108,6 +116,9 @@
 }
 
 @media screen and (min-width: 768px) {
+  .reviews {
+    padding-bottom: 96px;
+  }
   .reviews-prev-btn,
   .reviews-next-btn {
     padding: 18px;
@@ -121,5 +132,14 @@
   }
   .reviews-buttons {
     gap: 20px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .reviews {
+    padding-bottom: 164px;
+  }
+  .reviews-item > .swiper-slide-transform {
+    width: 332px;
+    height: 353px;
   }
 }

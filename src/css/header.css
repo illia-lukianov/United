@@ -62,6 +62,20 @@
 .menu {
   text-decoration: underline;
   letter-spacing: -0.02em;
+  transform: scale(1);
+  transition: transform 250ms ease-in;
+}
+@media (hover: hover) {
+  .menu:hover,
+  .menu:focus {
+    transform: scale(1.15);
+  }
+}
+
+@media not (hover: hover) {
+  .menu:active {
+    transform: scale(1.15);
+  }
 }
 
 .nav {
@@ -91,6 +105,23 @@
   gap: 5px;
 }
 
+.nav-link {
+  transform: scale(1);
+  transition: transform 250ms ease-in;
+}
+@media (hover: hover) {
+  .nav-link:hover,
+  .nav-link:focus {
+    transform: scale(1.15);
+  }
+}
+
+@media not (hover: hover) {
+  .nav-link:active {
+    transform: scale(1.15);
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .nav.is-open {
     visibility: visible;
@@ -110,6 +141,7 @@
   width: 163px;
   height: 55px;
   pointer-events: auto;
+  transition: background-color 250ms ease-in;
 }
 
 .order-project-btn-modal {
@@ -122,10 +154,25 @@
   align-items: center;
   justify-content: center;
   pointer-events: auto;
+  transition: background-color 250ms ease-in;
+}
+@media (hover: hover) {
+  .modal-close-btn:hover,
+  .modal-close-btn:focus {
+    animation: animationCloseBtn 0.3s ease-in forwards;
+    transform: scale(1.1);
+  }
 }
 
-.order-project-btn:hover {
-  background-color: var(--accent-hover-color);
+@media (hover: hover) {
+  .order-project-btn:is(:hover, :focus) {
+    background-color: var(--accent-hover-color);
+  }
+}
+@media not (hover: hover) {
+  .order-project-btn:active {
+    background-color: var(--accent-hover-color);
+  }
 }
 .burger-btn {
   background-color: transparent;
@@ -183,8 +230,18 @@
   justify-content: center;
   align-items: center;
   padding: 0;
+  transition: border-color 300ms ease-in;
 }
-
+@media (hover: hover) {
+  .themes-toggle:is(:hover, :focus) {
+    border-color: var(--main-color);
+  }
+}
+@media not (hover: hover) {
+  .themes-toggle:active {
+    border-color: var(--main-color);
+  }
+}
 .themes-switcher-icon {
   width: 20px;
   height: 20px;

@@ -1,5 +1,7 @@
 /* #region SECTION */
-
+.about-me-section {
+  padding-top: 64px;
+}
 .about-me-text {
   font-size: 24px;
   line-height: 117%;
@@ -135,6 +137,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: border-color 300ms ease-in;
+}
+@media (hover: hover) {
+  .acc-btn:hover .acc-arrow-circle,
+  .acc-btn:focus .acc-arrow-circle {
+    border: 1px solid #fafafa;
+  }
+}
+@media not (hover: hover) {
+  .acc-btn:active .acc-arrow-circle {
+    border-color: #fafafa;
+  }
 }
 
 .acc-arrow {
@@ -197,6 +212,19 @@
 .about-me-container-swiper .swiper-arrow-next {
   stroke: #3b3b3b;
   fill: transparent;
+
+  transition: stroke 300ms ease-in;
+}
+@media (hover: hover) {
+  .swiper-button-next:hover .swiper-arrow-next,
+  .swiper-button-next:focus .swiper-arrow-next {
+    stroke: var(--main-color);
+  }
+}
+@media not (hover: hover) {
+  .swiper-button-next:active .swiper-arrow-next {
+    stroke: var(--main-color);
+  }
 }
 /* #endregion */
 
@@ -280,6 +308,9 @@
 /* #region MEDIA 1440px */
 
 @media only screen and (min-width: 1440px) {
+  .about-me-section {
+    padding-top: 96px;
+  }
   .about-me-image-and-text-wrap {
     display: flex;
     gap: 16px;
@@ -325,7 +356,6 @@
 
     font-size: 18px;
   }
-
   .acc-content {
     max-width: 612px;
     max-height: 10000px;

@@ -52,12 +52,19 @@
   padding: 18px 36px;
   line-height: 1;
   letter-spacing: -0.02em;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease-in;
   margin-top: 32px;
 }
 
-.benefits-link:is(:hover, :focus) {
-  background-color: var(--accent-hover-color);
+@media (hover: hover) {
+  .benefits-link:is(:hover, :focus) {
+    background-color: var(--accent-hover-color);
+  }
+}
+@media not (hover: hover) {
+  .benefits-link:active {
+    background-color: var(--accent-hover-color);
+  }
 }
 /* #endregion */
 /* #region benefits Tablet */
@@ -81,7 +88,7 @@
   .benefits-title {
     margin-bottom: 0;
   }
-  
+
   .benefits-container {
     display: flex;
     flex-direction: row;
