@@ -9,6 +9,7 @@ const workRefs = {
   successMsg: document.querySelector('.success-msg'),
   errorMsg: document.querySelector('.error-msg'),
   emailInput: document.querySelector('[name="emailInput"]'),
+  commentInput: document.querySelector('[name="commentsInput"]'),
 };
 function validateEmail() {
   const emailRegex = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
@@ -78,7 +79,14 @@ function showError(message) {
     timeout: 6000,
   });
 }
-
+workRefs.commentInput.addEventListener('blur', shortenComment);
+function shortenComment(event) {
+  const maxChars = Math.floor(event.currentTarget.offsetWidth / 10);
+  const comment = event.currentTarget.value;
+  if (comment.length > maxChars) {
+    event.currentTarget.value = comment.substring(0, maxChars) + '...';
+  }
+}
 // Модифікований обробник сабміту
 workRefs.form.addEventListener('submit', async event => {
   event.preventDefault();
