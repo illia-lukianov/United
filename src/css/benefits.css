@@ -60,6 +60,11 @@
   .benefits-link:is(:hover, :focus) {
     background-color: var(--accent-hover-color);
   }
+
+  .benefits-link.order-project:hover {
+    padding-right: 42px;
+    padding-left: 24px;
+  }
 }
 @media not (hover: hover) {
   .benefits-link:active {

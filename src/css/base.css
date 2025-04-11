@@ -58,3 +58,28 @@ main:has(.back-link) {
 html {
   scroll-behavior: smooth;
 }
+
+@media (hover: hover) {
+  a.order-project {
+    transition: 0.5s;
+    position: relative;
+  }
+  
+  .order-project:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+    
+  .order-project:hover {
+    padding-right: 24px;
+    padding-left: 8px;
+  }
+  
+  .order-project:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+}
